@@ -12,7 +12,7 @@
       'nav.objects': 'Objekte', 'nav.about': 'Über uns', 'nav.services': 'Leistungen', 'nav.contact': 'Kontakt',
       'hero.title1': 'Investieren Sie in Immobilien', 'hero.title2': 'auf Bali', 'hero.title3': 'mit garantiertem Management',
       'hero.sub': 'Premium-Villen und Apartments mit einer Rendite von <b>bis zu 20 % p.a.</b>',
-      'hero.cta': 'Objektauswahl erhalten', 'hero.cta2': 'Objekte ansehen', 'hero.tourcard': 'Online-Tour<br>zum Objekt buchen',
+      'hero.cta': 'Objektauswahl erhalten', 'hero.cta2': 'Objekte ansehen', 'hero.tourcard': 'Online-Tour<br>zum Objekt buchen', 'hero.call': 'Call',
       'stat.invest': 'investieren ab', 'stat.exp': 'Erfahrung', 'stat.expv': '10 Jahre', 'stat.clients': 'zufriedene Kunden',
       'why.title': 'Warum Bali eine Zukunftsregion ist',
       'why.p1': 'Tourismuswachstum von über 15 % pro Jahr',
@@ -51,7 +51,7 @@
       'nav.objects': 'Properties', 'nav.about': 'About', 'nav.services': 'Services', 'nav.contact': 'Contact',
       'hero.title1': 'Invest in real estate', 'hero.title2': 'in Bali', 'hero.title3': 'with guaranteed management',
       'hero.sub': 'Premium villas and apartments with a yield of <b>up to 20 % p.a.</b>',
-      'hero.cta': 'Get a selection', 'hero.cta2': 'View properties', 'hero.tourcard': 'Book an online<br>tour of the property',
+      'hero.cta': 'Get a selection', 'hero.cta2': 'View properties', 'hero.tourcard': 'Book an online<br>tour of the property', 'hero.call': 'Call',
       'stat.invest': 'invest from', 'stat.exp': 'experience', 'stat.expv': '10 years', 'stat.clients': 'happy clients',
       'why.title': 'Why Bali is a region of the future',
       'why.p1': 'Tourism growth of more than 15 % per year',
@@ -90,7 +90,7 @@
       'nav.objects': 'Объекты', 'nav.about': 'О нас', 'nav.services': 'Услуги', 'nav.contact': 'Контакты',
       'hero.title1': 'Инвестируйте в недвижимость', 'hero.title2': 'на Бали', 'hero.title3': 'с гарантированным управлением',
       'hero.sub': 'Премиальные виллы и апартаменты с доходностью <b>до 20 % годовых</b>',
-      'hero.cta': 'Получить подборку', 'hero.cta2': 'Смотреть объекты', 'hero.tourcard': 'Записаться<br>на онлайн-тур',
+      'hero.cta': 'Получить подборку', 'hero.cta2': 'Смотреть объекты', 'hero.tourcard': 'Записаться<br>на онлайн-тур', 'hero.call': 'Call',
       'stat.invest': 'инвестируйте от', 'stat.exp': 'опыт', 'stat.expv': '10 лет', 'stat.clients': 'довольных клиентов',
       'why.title': 'Почему Бали — перспективный регион',
       'why.p1': 'Рост туризма более 15 % в год',
@@ -129,7 +129,7 @@
       'nav.objects': 'Обʼєкти', 'nav.about': 'Про нас', 'nav.services': 'Послуги', 'nav.contact': 'Контакти',
       'hero.title1': 'Інвестуйте в нерухомість', 'hero.title2': 'на Балі', 'hero.title3': 'з гарантованим управлінням',
       'hero.sub': 'Преміальні вілли та апартаменти з дохідністю <b>до 20 % річних</b>',
-      'hero.cta': 'Отримати добірку', 'hero.cta2': 'Дивитися обʼєкти', 'hero.tourcard': 'Записатися<br>на онлайн-тур',
+      'hero.cta': 'Отримати добірку', 'hero.cta2': 'Дивитися обʼєкти', 'hero.tourcard': 'Записатися<br>на онлайн-тур', 'hero.call': 'Call',
       'stat.invest': 'інвестуйте від', 'stat.exp': 'досвід', 'stat.expv': '10 років', 'stat.clients': 'задоволених клієнтів',
       'why.title': 'Чому Балі — перспективний регіон',
       'why.p1': 'Зростання туризму понад 15 % на рік',
@@ -374,6 +374,11 @@
     bindLang();
     bindDrawer();
     bindReveal();
+    // header: transparent over hero -> solid on scroll
+    const header = $('#header');
+    const onScroll = () => header.classList.toggle('header--solid', window.scrollY > 40);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
     bindForm('tourForm', 'toast.tour');
     bindForm('footerForm', 'toast.footer');
     $('#phoneAnswer').addEventListener('click', () => toast(t('toast.answer')));

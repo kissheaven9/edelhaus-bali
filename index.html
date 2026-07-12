@@ -7,8 +7,8 @@
 <meta name="description" content="edelhaus — Premium-Villen und Apartments auf Bali mit garantiertem Management. Rendite bis 20 % p.a., deutschsprachige Betreuung von der Auswahl bis zum Eigentum.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=2">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css?v=5">
 </head>
 <body>
 
@@ -20,6 +20,7 @@
     <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5 9 4l1 4-2 1.5a11 11 0 0 0 4.5 4.5L14 16l4 1 .5 2.5a2 2 0 0 1-2 2.3A16.5 16.5 0 0 1 4.2 5.5a2 2 0 0 1 2.3-2Z"/></symbol>
     <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 2.6 15 0 18M12 3c-2.6 2.5-2.6 15 0 18"/></symbol>
     <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M6 13l6 6 6-6"/></symbol>
     <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 6"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="11" r="2.6"/></symbol>
@@ -38,22 +39,21 @@
 </svg>
 
 <!-- ===== Header ===== -->
-<header class="header">
+<header class="header" id="header">
   <div class="container header__row">
     <a href="#top" class="brand">edelhaus</a>
     <nav class="nav" aria-label="Hauptnavigation">
       <a href="#katalog" data-i18n="nav.objects">Objekte</a>
-      <a href="#vorteile" data-i18n="nav.about">Über uns</a>
-      <a href="#leistungen" data-i18n="nav.services">Leistungen</a>
+      <a href="#vorteile" class="is-bold" data-i18n="nav.about">Über uns</a>
     </nav>
     <div class="header__spacer"></div>
     <div class="header__tools">
-      <a class="icon-btn" href="#" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
-      <a class="icon-btn" href="tel:+4980012345" aria-label="Telefon"><svg><use href="#i-phone"/></svg></a>
-      <a class="btn btn--sm" href="#kontakt" data-i18n="nav.contact">Kontakt</a>
+      <a class="pill pill--round" href="#" aria-label="Instagram">Inst</a>
+      <a class="pill pill--round" href="tel:+4980012345" aria-label="Telefon">Tel</a>
+      <a class="pill" href="#kontakt" data-i18n="nav.contact">Kontakt</a>
       <div class="lang" id="lang">
-        <button class="lang__btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
-          <svg><use href="#i-globe"/></svg><span id="langCur">DE</span><svg><use href="#i-chevron"/></svg>
+        <button class="pill lang__btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+          <svg><use href="#i-globe"/></svg><span id="langCur">DE</span><svg class="lang__caret"><use href="#i-chevron"/></svg>
         </button>
         <div class="lang__menu" role="menu" id="langMenu">
           <button data-lang="de" role="menuitem"><span class="lang__flag">🇩🇪</span> Deutsch</button>
@@ -62,58 +62,50 @@
           <button data-lang="uk" role="menuitem"><span class="lang__flag">🇺🇦</span> Українська</button>
         </div>
       </div>
-      <button class="icon-btn burger" id="burger" aria-label="Menü"><svg><use href="#i-menu"/></svg></button>
+      <button class="pill pill--round burger" id="burger" aria-label="Menü"><svg><use href="#i-menu"/></svg></button>
     </div>
   </div>
 </header>
 
-<main id="top">
+<main>
 
-<!-- ===== Hero ===== -->
-<section class="section hero">
-  <div class="container">
-    <div class="hero__grid">
-      <div class="hero__copy reveal">
-        <h1><span data-i18n="hero.title1">Investieren Sie in Immobilien</span> <span class="mark" data-i18n="hero.title2">auf Bali</span> <span data-i18n="hero.title3">mit garantiertem Management</span></h1>
-        <p class="hero__sub" data-i18n-html="hero.sub">Premium-Villen und Apartments mit einer Rendite von <b>bis zu 20 % p.a.</b></p>
-        <div class="hero__cta">
-          <a class="btn btn--accent btn--lg" href="#kontakt" data-i18n="hero.cta">Objektauswahl erhalten</a>
-          <a class="btn btn--light btn--lg" href="#katalog" data-i18n="hero.cta2">Objekte ansehen</a>
-        </div>
+<!-- ===== Hero (split: white copy left, villa image right) ===== -->
+<section class="hero" id="top">
+  <div class="hero__media">
+    <img class="hero__bg" src="assets/img/hero-villa.jpg" alt="Premium-Villa auf Bali bei Nacht mit Pool">
+    <div class="hero__scrim" aria-hidden="true"></div>
+    <div class="tour-card">
+      <div class="tour-card__main">
+        <p class="tour-card__txt" data-i18n-html="hero.tourcard">Online-Tour<br>zum Objekt buchen</p>
+        <a class="tour-card__call" href="#tour" aria-label="Call"><svg><use href="#i-phone"/></svg><span data-i18n="hero.call">Call</span></a>
       </div>
-      <div class="hero__media reveal">
-        <img class="hero__photo" src="assets/img/hero-villa.jpg" alt="Premium-Villa auf Bali bei Nacht mit Pool">
-        <div class="tour-card">
-          <img class="tour-card__thumb" src="assets/img/onlinetour-person.jpg" alt="">
-          <div class="tour-card__txt" data-i18n-html="hero.tourcard">Online-Tour<br>zum Objekt buchen</div>
-          <a class="btn btn--accent" href="#tour" aria-label="Call"><svg><use href="#i-phone"/></svg></a>
-        </div>
-      </div>
+      <img class="tour-card__thumb" src="assets/img/onlinetour-person.jpg" alt="Berater im Video-Call">
     </div>
-
-    <div class="stats reveal">
-      <div class="stat"><div class="stat__label" data-i18n="stat.invest">investieren ab</div><div class="stat__num">80.000 €</div></div>
-      <div class="stat"><div class="stat__label" data-i18n="stat.exp">Erfahrung</div><div class="stat__num" data-i18n="stat.expv">10 Jahre</div></div>
-      <div class="stat"><div class="stat__label" data-i18n="stat.clients">zufriedene Kunden</div><div class="stat__num">300+</div></div>
+    <div class="hero__why">
+      <h2 class="hero__why-title" data-i18n="why.title">Warum Bali eine Zukunftsregion ist</h2>
+      <ul class="hero__why-list">
+        <li data-i18n="why.p1">Tourismuswachstum von über 15 % pro Jahr</li>
+        <li data-i18n="why.p2">Stabile Vermietungsauslastung das ganze Jahr</li>
+        <li data-i18n="why.p3">Wertsteigerung der Immobilien bis zu 20 % jährlich</li>
+        <li data-i18n="why.p4">Hohe Nachfrage bei Digital Nomads und Expats</li>
+      </ul>
     </div>
   </div>
-</section>
 
-<!-- ===== Why Bali ===== -->
-<section class="section section--tight">
-  <div class="container">
-    <div class="why reveal">
-      <div class="why__grid">
-        <div class="why__media"><img src="assets/img/whybali.jpg" alt="Modernes Wohn-Resort auf Bali"></div>
-        <div class="why__copy">
-          <h2 data-i18n="why.title">Warum Bali eine Zukunftsregion ist</h2>
-          <ul class="why__list">
-            <li data-i18n="why.p1">Tourismuswachstum von über 15 % pro Jahr</li>
-            <li data-i18n="why.p2">Stabile Vermietungsauslastung das ganze Jahr</li>
-            <li data-i18n="why.p3">Wertsteigerung der Immobilien bis zu 20 % jährlich</li>
-            <li data-i18n="why.p4">Hohe Nachfrage bei Digital Nomads und Expats</li>
-          </ul>
-        </div>
+  <div class="container hero__wrap">
+    <div class="hero__content">
+      <h1 class="hero__title"><span data-i18n="hero.title1">Investieren Sie in Immobilien</span> <span class="mark" data-i18n="hero.title2">auf Bali</span> <span data-i18n="hero.title3">mit garantiertem Management</span></h1>
+      <div class="hero__actions">
+        <p class="hero__sub" data-i18n-html="hero.sub">Premium-Villen und Apartments mit einer Rendite von <b>bis zu 20 % p.a.</b></p>
+        <a class="btn btn--dark hero__cta" href="#kontakt"><span data-i18n="hero.cta">Objektauswahl erhalten</span><svg class="hero__cta-i"><use href="#i-arrow-down"/></svg></a>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="stat__label" data-i18n="stat.invest">investieren ab</div><div class="stat__num">80.000 €</div></div>
+        <div class="stat"><div class="stat__label" data-i18n="stat.exp">Erfahrung</div><div class="stat__num" data-i18n="stat.expv">10 Jahre</div></div>
+        <div class="stat"><div class="stat__label" data-i18n="stat.clients">zufriedene Kunden</div><div class="stat__num">300+</div></div>
+      </div>
+      <div class="hero__stack">
+        <img src="assets/img/whybali.jpg" alt="Modernes Wohn-Resort auf Bali">
       </div>
     </div>
   </div>
@@ -349,6 +341,6 @@
 
 <div class="toast-wrap" id="toasts"></div>
 
-<script src="assets/js/app.js?v=2"></script>
+<script src="assets/js/app.js?v=3"></script>
 </body>
 </html>
