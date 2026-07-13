@@ -349,7 +349,9 @@ p{margin:0}
 .modal__loc{color:var(--ink-3);margin-top:4px}
 .modal__specs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:22px 0}
 .modal__specs .spec{background:var(--bg-soft);border-radius:14px;padding:14px 16px}
-.modal__desc{color:var(--ink-2);margin-bottom:24px}
+.modal__desc{color:var(--ink-2);margin-bottom:24px;font-size:.9rem}
+.modal__src{display:inline-block;margin-left:6px;color:var(--accent);font-weight:600;text-decoration:none}
+.modal__src:hover{text-decoration:underline}
 .modal__cta{display:flex;gap:12px;flex-wrap:wrap}
 
 /* ---------- Toast ---------- */

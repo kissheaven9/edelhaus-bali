@@ -20,10 +20,10 @@
       'why.p3': 'Wertsteigerung der Immobilien bis zu 20 % jährlich',
       'why.p4': 'Hohe Nachfrage bei Digital Nomads und Expats',
       'partners.title': 'Wir arbeiten mit den Besten', 'partners.short': 'Partner',
-      'catalog.title': 'Finden Sie Ihr ideales Objekt',
+      'catalog.title': 'Finden Sie Ihr ideales Objekt', 'catalog.note': 'Echte, öffentlich gelistete Bali-Objekte. Angaben & Renditen laut Quelle (im Detail verlinkt).',
       'catalog.f.all': 'Alle', 'catalog.f.apartment': 'Apartments', 'catalog.f.villa': 'Villen', 'catalog.f.offplan': 'Neubau', 'catalog.f.commercial': 'Gewerbe',
       'catalog.more': 'Mehr erfahren', 'catalog.empty': 'Keine Objekte in dieser Kategorie.',
-      'spec.from': 'ab', 'spec.upto': 'bis', 'spec.area': 'Fläche', 'spec.price': 'Preis', 'spec.yield': 'Rendite', 'spec.tenure': 'Leasehold 25–30 Jahre',
+      'spec.from': 'ab', 'spec.upto': 'bis', 'spec.area': 'Fläche', 'spec.price': 'Preis', 'spec.yield': 'Rendite', 'spec.tenure': 'Besitzform', 'spec.dev': 'Bauträger', 'spec.completion': 'Fertigstellung', 'spec.onreq': 'auf Anfrage',
       'tour.badge': 'deutsche Betreuung', 'tour.answer': 'Antworten', 'tour.title': 'Buchen Sie eine <span class="mark">Online-Tour</span>',
       'tour.text': 'Wir zeigen Ihnen die Objekte Ihrer Wahl und berechnen die Rendite.', 'tour.submit': 'Termin buchen',
       'form.name': 'Name', 'form.name.ph': 'Ihr Name', 'form.phone': 'Telefon', 'form.phone.ph': '+49 …',
@@ -42,7 +42,7 @@
       'l.legal.t': 'Rechtssicherheit', 'l.legal.d': 'Wir arbeiten mit geprüften Juristen und sichern eine saubere Transaktion.',
       'footer.advantages': 'Vorteile', 'footer.hours': 'Mo–Fr, 8:00–18:00', 'footer.imprint': 'Impressum', 'footer.privacy': 'Datenschutz',
       'footer.formtitle': 'Anmeldung zur Online-Tour', 'footer.submit': 'Anfrage senden', 'footer.demo': 'Portfolio-Demo · kein reales Angebot',
-      'modal.cta': 'Online-Tour buchen', 'modal.call': 'Rückruf anfordern',
+      'modal.cta': 'Online-Tour buchen', 'modal.call': 'Rückruf anfordern', 'modal.source': 'Quelle', 'modal.note': 'Angaben laut Quelle · Portfolio-Demo.',
       'toast.tour': 'Danke! Wir rufen Sie für die Online-Tour zurück.',
       'toast.footer': 'Anfrage gesendet — wir melden uns in Kürze.',
       'toast.answer': 'Verbindung wird hergestellt … (Demo)'
@@ -59,10 +59,10 @@
       'why.p3': 'Property value growth of up to 20 % annually',
       'why.p4': 'High demand among digital nomads and expats',
       'partners.title': 'We work with the best', 'partners.short': 'Partners',
-      'catalog.title': 'Find your ideal property',
+      'catalog.title': 'Find your ideal property', 'catalog.note': 'Real, publicly listed Bali properties. Figures & yields per source (linked in each detail).',
       'catalog.f.all': 'All', 'catalog.f.apartment': 'Apartments', 'catalog.f.villa': 'Villas', 'catalog.f.offplan': 'Off-plan', 'catalog.f.commercial': 'Commercial',
       'catalog.more': 'Learn more', 'catalog.empty': 'No properties in this category.',
-      'spec.from': 'from', 'spec.upto': 'up to', 'spec.area': 'Area', 'spec.price': 'Price', 'spec.yield': 'Yield', 'spec.tenure': 'Leasehold 25–30 years',
+      'spec.from': 'from', 'spec.upto': 'up to', 'spec.area': 'Area', 'spec.price': 'Price', 'spec.yield': 'Yield', 'spec.tenure': 'Tenure', 'spec.dev': 'Developer', 'spec.completion': 'Completion', 'spec.onreq': 'on request',
       'tour.badge': 'German-speaking support', 'tour.answer': 'Answer', 'tour.title': 'Book an <span class="mark">online tour</span>',
       'tour.text': 'We show you the properties of your choice and calculate the yield.', 'tour.submit': 'Book a slot',
       'form.name': 'Name', 'form.name.ph': 'Your name', 'form.phone': 'Phone', 'form.phone.ph': '+49 …',
@@ -81,7 +81,7 @@
       'l.legal.t': 'Legal security', 'l.legal.d': 'We work with vetted lawyers to ensure a clean transaction.',
       'footer.advantages': 'Advantages', 'footer.hours': 'Mon–Fri, 8:00–18:00', 'footer.imprint': 'Imprint', 'footer.privacy': 'Privacy',
       'footer.formtitle': 'Sign up for an online tour', 'footer.submit': 'Send request', 'footer.demo': 'Portfolio demo · not a real offer',
-      'modal.cta': 'Book an online tour', 'modal.call': 'Request a callback',
+      'modal.cta': 'Book an online tour', 'modal.call': 'Request a callback', 'modal.source': 'Source', 'modal.note': 'Data per source · portfolio demo.',
       'toast.tour': 'Thank you! We will call you back for the online tour.',
       'toast.footer': 'Request sent — we will get in touch shortly.',
       'toast.answer': 'Connecting … (demo)'
@@ -98,10 +98,10 @@
       'why.p3': 'Рост стоимости недвижимости до 20 % в год',
       'why.p4': 'Востребованность среди digital nomads и экспатов',
       'partners.title': 'Мы работаем с лучшими', 'partners.short': 'Партнёры',
-      'catalog.title': 'Подберите свой идеальный объект',
+      'catalog.title': 'Подберите свой идеальный объект', 'catalog.note': 'Реальные объекты Бали из открытых листингов. Данные и доходность — по источнику (ссылка в деталях).',
       'catalog.f.all': 'Все', 'catalog.f.apartment': 'Апартаменты', 'catalog.f.villa': 'Виллы', 'catalog.f.offplan': 'Новостройки', 'catalog.f.commercial': 'Коммерция',
       'catalog.more': 'Узнать больше', 'catalog.empty': 'В этой категории пока нет объектов.',
-      'spec.from': 'от', 'spec.upto': 'до', 'spec.area': 'Площадь', 'spec.price': 'Стоимость', 'spec.yield': 'Доходность', 'spec.tenure': 'Лизхолд 25–30 лет',
+      'spec.from': 'от', 'spec.upto': 'до', 'spec.area': 'Площадь', 'spec.price': 'Стоимость', 'spec.yield': 'Доходность', 'spec.tenure': 'Право', 'spec.dev': 'Застройщик', 'spec.completion': 'Сдача', 'spec.onreq': 'по запросу',
       'tour.badge': 'немецкая поддержка', 'tour.answer': 'Ответить', 'tour.title': 'Запишитесь на <span class="mark">онлайн-тур</span>',
       'tour.text': 'Мы покажем заинтересовавшие вас объекты и рассчитаем доходность.', 'tour.submit': 'Записаться',
       'form.name': 'Имя', 'form.name.ph': 'Ваше имя', 'form.phone': 'Телефон', 'form.phone.ph': '+49 …',
@@ -120,7 +120,7 @@
       'l.legal.t': 'Юридическая безопасность', 'l.legal.d': 'Работаем с проверенными юристами и обеспечиваем чистоту сделки.',
       'footer.advantages': 'Преимущества', 'footer.hours': 'Пн–Пт, 8:00–18:00', 'footer.imprint': 'Импрессум', 'footer.privacy': 'Конфиденциальность',
       'footer.formtitle': 'Запись на онлайн-тур', 'footer.submit': 'Отправить заявку', 'footer.demo': 'Демо для портфолио · не реальное предложение',
-      'modal.cta': 'Записаться на онлайн-тур', 'modal.call': 'Заказать звонок',
+      'modal.cta': 'Записаться на онлайн-тур', 'modal.call': 'Заказать звонок', 'modal.source': 'Источник', 'modal.note': 'Данные по источнику · демо для портфолио.',
       'toast.tour': 'Спасибо! Мы перезвоним для онлайн-тура.',
       'toast.footer': 'Заявка отправлена — скоро свяжемся.',
       'toast.answer': 'Устанавливаем соединение … (демо)'
@@ -137,10 +137,10 @@
       'why.p3': 'Зростання вартості нерухомості до 20 % на рік',
       'why.p4': 'Попит серед digital nomads та експатів',
       'partners.title': 'Ми працюємо з найкращими', 'partners.short': 'Партнери',
-      'catalog.title': 'Підберіть свій ідеальний обʼєкт',
+      'catalog.title': 'Підберіть свій ідеальний обʼєкт', 'catalog.note': 'Реальні обʼєкти Балі з відкритих лістингів. Дані та дохідність — за джерелом (посилання в деталях).',
       'catalog.f.all': 'Усі', 'catalog.f.apartment': 'Апартаменти', 'catalog.f.villa': 'Вілли', 'catalog.f.offplan': 'Новобудови', 'catalog.f.commercial': 'Комерція',
       'catalog.more': 'Дізнатися більше', 'catalog.empty': 'У цій категорії поки немає обʼєктів.',
-      'spec.from': 'від', 'spec.upto': 'до', 'spec.area': 'Площа', 'spec.price': 'Вартість', 'spec.yield': 'Дохідність', 'spec.tenure': 'Лізхолд 25–30 років',
+      'spec.from': 'від', 'spec.upto': 'до', 'spec.area': 'Площа', 'spec.price': 'Вартість', 'spec.yield': 'Дохідність', 'spec.tenure': 'Право', 'spec.dev': 'Забудовник', 'spec.completion': 'Здача', 'spec.onreq': 'за запитом',
       'tour.badge': 'німецька підтримка', 'tour.answer': 'Відповісти', 'tour.title': 'Запишіться на <span class="mark">онлайн-тур</span>',
       'tour.text': 'Ми покажемо обрані вами обʼєкти та розрахуємо дохідність.', 'tour.submit': 'Записатися',
       'form.name': 'Імʼя', 'form.name.ph': 'Ваше імʼя', 'form.phone': 'Телефон', 'form.phone.ph': '+49 …',
@@ -159,7 +159,7 @@
       'l.legal.t': 'Юридична безпека', 'l.legal.d': 'Працюємо з перевіреними юристами та забезпечуємо чистоту угоди.',
       'footer.advantages': 'Переваги', 'footer.hours': 'Пн–Пт, 8:00–18:00', 'footer.imprint': 'Імпресум', 'footer.privacy': 'Конфіденційність',
       'footer.formtitle': 'Запис на онлайн-тур', 'footer.submit': 'Надіслати заявку', 'footer.demo': 'Демо для портфоліо · не реальна пропозиція',
-      'modal.cta': 'Записатися на онлайн-тур', 'modal.call': 'Замовити дзвінок',
+      'modal.cta': 'Записатися на онлайн-тур', 'modal.call': 'Замовити дзвінок', 'modal.source': 'Джерело', 'modal.note': 'Дані згідно з джерелом · демо для портфоліо.',
       'toast.tour': 'Дякуємо! Ми передзвонимо для онлайн-туру.',
       'toast.footer': 'Заявку надіслано — незабаром звʼяжемося.',
       'toast.answer': 'Встановлюємо зʼєднання … (демо)'
@@ -170,38 +170,43 @@
   let lang = 'de';
   const t = (k) => (I18N[lang] && I18N[lang][k]) || (I18N.de[k] || k);
 
-  /* ---------------- Catalog data (realistic Bali demo) ---------------- */
+  /* ---------------- Catalog data — REAL, publicly-listed Bali objects.
+     Parameters (developer, district, area, price, tenure, yield) taken from the
+     linked source listings. Prices ~ converted to EUR (1 EUR ≈ 1.08 USD).
+     Yields are developer/market estimates as stated by the source. ---------------- */
   const OBJECTS = [
-    { id: 'berawa', type: 'apartment', name: 'Berawa Studio Suites', loc: 'Canggu · Berawa', area: 34, price: 96000, yield: 12, img: 'assets/img/whybali.jpg', pos: '50% 40%',
-      desc: { de: 'Kompakte Studio-Apartments im Herzen von Berawa mit Hotel-Management, Pool und Co-Working. Ideal für den Einstieg in den Bali-Markt.',
-              en: 'Compact studio apartments in the heart of Berawa with hotel management, pool and co-working. Ideal entry into the Bali market.',
-              ru: 'Компактные студии в сердце Бераwa с гостиничным управлением, бассейном и коворкингом. Идеальный вход на рынок Бали.',
-              uk: 'Компактні студії в серці Берава з готельним управлінням, басейном і коворкінгом. Ідеальний вхід на ринок Балі.' } },
-    { id: 'ubud', type: 'villa', name: 'Ubud Jungle Villa', loc: 'Ubud', area: 120, price: 245000, yield: 11, img: 'assets/img/hero-villa.jpg', pos: '50% 60%',
-      desc: { de: 'Freistehende 2-Zimmer-Villa mit privatem Pool im grünen Ubud. Beliebt bei Wellness- und Langzeitgästen.',
-              en: 'Detached 2-bedroom villa with private pool in green Ubud. Popular with wellness and long-stay guests.',
-              ru: 'Отдельная вилла с двумя спальнями и собственным бассейном в зелёном Убуде. Популярна у wellness- и долгосрочных гостей.',
-              uk: 'Окрема вілла з двома спальнями та власним басейном у зеленому Убуді. Популярна серед wellness- та довгострокових гостей.' } },
-    { id: 'uluwatu', type: 'offplan', name: 'Uluwatu Cliff Residence', loc: 'Uluwatu', area: 45, price: 135000, yield: 14, img: 'assets/img/onlinetour-villa.jpg', pos: '50% 55%',
-      desc: { de: 'Neubau-Suiten mit Meerblick nahe den Klippen von Uluwatu. Off-Plan-Preisvorteil und starke Wertsteigerung während der Bauphase.',
-              en: 'Off-plan sea-view suites near the Uluwatu cliffs. Pre-construction price advantage and strong appreciation during the build.',
-              ru: 'Новостройка-сьюты с видом на океан у скал Улувату. Ценовое преимущество off-plan и высокий рост стоимости за срок стройки.',
-              uk: 'Новобудова-сьюти з видом на океан біля скель Улувату. Цінова перевага off-plan і високе зростання вартості за час будівництва.' } },
-    { id: 'pererenan', type: 'apartment', name: 'Pererenan Garden Lofts', loc: 'Pererenan', area: 52, price: 118000, yield: 12, img: 'assets/img/whybali.jpg', pos: '70% 50%',
-      desc: { de: '1-Zimmer-Lofts mit Gartenblick im aufstrebenden Pererenan. Professioneller Vermietungsservice inklusive.',
-              en: '1-bedroom lofts with garden view in up-and-coming Pererenan. Professional rental service included.',
-              ru: 'Однокомнатные лофты с видом на сад в растущем Преренане. Профессиональный сервис аренды включён.',
-              uk: 'Однокімнатні лофти з видом на сад у зростаючому Преренані. Професійний сервіс оренди включено.' } },
-    { id: 'canggu', type: 'villa', name: 'Canggu Signature Villa', loc: 'Canggu', area: 180, price: 390000, yield: 10, img: 'assets/img/hero-villa.jpg', pos: '40% 45%',
-      desc: { de: 'Repräsentative 3-Zimmer-Villa im Zentrum von Canggu mit ganzjähriger Auslastung und etabliertem Rental-Track-Record.',
-              en: 'Prestigious 3-bedroom villa in central Canggu with year-round occupancy and an established rental track record.',
-              ru: 'Представительная вилла с тремя спальнями в центре Чангу с круглогодичной загрузкой и подтверждённой историей аренды.',
-              uk: 'Представницька вілла з трьома спальнями в центрі Чангу з цілорічним завантаженням і підтвердженою історією оренди.' } },
-    { id: 'seminyak', type: 'commercial', name: 'Seminyak Retail Space', loc: 'Seminyak', area: 90, price: 210000, yield: 9, img: 'assets/img/footer-bg.jpg', pos: '50% 50%',
-      desc: { de: 'Gewerbefläche in Top-Lage von Seminyak — geeignet für Café, Boutique oder Wellness-Studio. Stabile Mieteinnahmen.',
-              en: 'Commercial space in a prime Seminyak location — suitable for a café, boutique or wellness studio. Stable rental income.',
-              ru: 'Коммерческое помещение в топовой локации Семиньяка — под кафе, бутик или wellness-студию. Стабильный доход от аренды.',
-              uk: 'Комерційне приміщення у топовій локації Семіньяка — під кафе, бутик або wellness-студію. Стабільний дохід від оренди.' } }
+    { id: 'newcanggu', type: 'offplan', name: 'The New Canggu', dev: 'Bright Solution Property', loc: 'Padonan · Canggu',
+      area: 98, price: 115000, yieldTxt: '13–16 %', tenure: 'Leasehold 25 J. (+5)', done: '2026',
+      img: 'assets/img/obj/newcanggu.jpg', pos: '50% 55%',
+      source: 'https://brightsolutionproperty.com/blog/off-plan-project-padonan-villas-in-canggu-bali' },
+    { id: 'karmabeach', type: 'offplan', name: 'Karma Beach Villa', dev: 'BBB Developments', loc: 'Uluwatu · Pecatu',
+      area: 145, price: 106000, yieldTxt: '~18 %', tenure: 'Leasehold 35 J.', done: '2026',
+      img: 'assets/img/obj/karmabeach.jpg', pos: '50% 55%',
+      source: 'https://www.balivillahub.com/en/property-details/uluwatu/offplan-uluwatu-karma-beach-ocean-views-2-11346' },
+    { id: 'bingincliff', type: 'offplan', name: 'Bingin Cliff Villa', dev: 'Compass Realty Bali', loc: 'Uluwatu · Bingin',
+      area: 145, price: 190000, yieldTxt: '~15 %', tenure: 'Leasehold 24 J.', done: '2027',
+      img: 'assets/img/obj/bingincliff.jpg', pos: '50% 55%',
+      source: 'https://www.balivillahub.com/en/property-details/uluwatu/off-plan-villa-walking-distance-to-bingin-cliff-10907' },
+    { id: 'munggu', type: 'villa', name: 'Boho Japandi Villa', dev: 'Bali Villa Realty', loc: 'Munggu · Mengwi',
+      area: 260, price: 360000, yieldTxt: null, tenure: 'Leasehold 32 J.', done: '2025',
+      img: 'assets/img/obj/munggu.jpg', pos: '50% 55%',
+      source: 'https://balivillarealty.com/villa/sale/seseh/munggu/boho-japandi-2br-leasehold-villa-with-dual-pools-rooftop-in-munggu/' },
+    { id: 'ubud', type: 'villa', name: 'Ricefield Villa Ubud', dev: 'Bali Villa Realty', loc: 'Ubud · Gianyar',
+      area: 176, price: 220000, yieldTxt: null, tenure: 'Freehold (Hak Milik)', done: '2022',
+      img: 'assets/img/obj/ubud.jpg', pos: '50% 55%',
+      source: 'https://balivillarealty.com/villa/sale/ubud/modern-2br-freehold-rice-field-view-villa-in-ubud/' },
+    { id: 'canggumed', type: 'villa', name: 'Mediterran Villa Canggu', dev: 'Bali Villa Realty', loc: 'Canggu · Tibubeneng',
+      area: 100, price: 150000, yieldTxt: null, tenure: 'Leasehold 27 J.', done: '2026',
+      img: 'assets/img/obj/canggumed.jpg', pos: '50% 60%',
+      source: 'https://balivillarealty.com/villa/sale/canggu/luxury-2br-mediterranean-leasehold-villa-with-pool-in-prime-canggu/' },
+    { id: 'binginapt', type: 'apartment', name: 'Bingin Designer Suite', dev: 'Bali Villa Realty', loc: 'Uluwatu · Bingin',
+      area: 90, price: 140000, yieldTxt: null, tenure: 'Leasehold 32 J.', done: 'Neubau',
+      img: 'assets/img/obj/binginapt.jpg', pos: '50% 50%',
+      source: 'https://balivillarealty.com/apartment/sale/uluwatu/bingin/high-yield-off-plan-opportunity-90m%c2%b2-designer-sanctuary-in-bingin-prime-32-year-leasehold/' },
+    { id: 'hotelulu', type: 'commercial', name: 'Boutique-Hotel Uluwatu', dev: 'Harcourts Purba Bali', loc: 'Uluwatu · Pecatu',
+      area: 2225, price: 3500000, yieldTxt: '9–12 %', tenure: 'Freehold (HGB)', done: '2027',
+      img: 'assets/img/obj/hotelulu.jpg', pos: '50% 55%',
+      source: 'https://harcourtspurbabali.com/property/rare-ocean-view-boutique-hotel-investment-in-uluwatu/' }
   ];
 
   let currentFilter = 'all';
@@ -237,8 +242,8 @@
           <div class="pcard__specs">
             <div><div class="spec__k">${t('spec.area')}</div><div class="spec__v">${t('spec.from')} ${o.area} m²</div></div>
             <div><div class="spec__k">${t('spec.price')}</div><div class="spec__v">${t('spec.from')} ${fmtEUR(o.price)} €</div></div>
-            <div><div class="spec__k">${t('spec.yield')}</div><div class="spec__v"><span class="mark">${t('spec.upto')} ${o.yield} %</span></div></div>
-            <div><div class="spec__k">&nbsp;</div><div class="spec__v" style="font-weight:500;color:var(--ink-3);font-size:.78rem">${t('spec.tenure')}</div></div>
+            <div><div class="spec__k">${t('spec.yield')}</div><div class="spec__v">${o.yieldTxt ? '<span class="mark">' + o.yieldTxt + '</span>' : '<span style="color:var(--ink-3);font-weight:500">' + t('spec.onreq') + '</span>'}</div></div>
+            <div><div class="spec__k">${t('spec.dev')}</div><div class="spec__v" style="font-weight:500;font-size:.8rem">${o.dev}</div></div>
           </div>
           <button class="btn btn--sm" data-more="${o.id}">${t('catalog.more')}</button>
         </div>
@@ -270,9 +275,14 @@
     $('#modalSpecs').innerHTML = [
       ['spec.area', t('spec.from') + ' ' + o.area + ' m²'],
       ['spec.price', t('spec.from') + ' ' + fmtEUR(o.price) + ' €'],
-      ['spec.yield', t('spec.upto') + ' ' + o.yield + ' %']
+      ['spec.yield', o.yieldTxt || t('spec.onreq')],
+      ['spec.dev', o.dev],
+      ['spec.tenure', o.tenure],
+      ['spec.completion', o.done]
     ].map(([k, v]) => `<div class="spec"><div class="spec__k">${t(k)}</div><div class="spec__v">${v}</div></div>`).join('');
-    $('#modalDesc').textContent = o.desc[lang] || o.desc.de;
+    const host = (function(){ try { return new URL(o.source).hostname.replace('www.', ''); } catch (e) { return o.source; } })();
+    $('#modalDesc').innerHTML = t('modal.note') +
+      ' <a href="' + o.source + '" target="_blank" rel="noopener nofollow" class="modal__src">' + t('modal.source') + ': ' + host + ' ↗</a>';
     const m = $('#modal'); m.classList.add('open'); document.body.style.overflow = 'hidden';
     $('.modal__close').focus();
   }
