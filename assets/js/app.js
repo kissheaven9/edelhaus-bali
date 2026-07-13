@@ -23,7 +23,7 @@
       'catalog.title': 'Finden Sie Ihr ideales Objekt', 'catalog.note': 'Echte, öffentlich gelistete Bali-Objekte. Angaben & Renditen laut Quelle (im Detail verlinkt).',
       'catalog.f.all': 'Alle', 'catalog.f.apartment': 'Apartments', 'catalog.f.villa': 'Villen', 'catalog.f.offplan': 'Neubau', 'catalog.f.commercial': 'Gewerbe',
       'catalog.more': 'Mehr erfahren', 'catalog.empty': 'Keine Objekte in dieser Kategorie.',
-      'spec.from': 'ab', 'spec.upto': 'bis', 'spec.area': 'Fläche', 'spec.price': 'Preis', 'spec.yield': 'Rendite', 'spec.tenure': 'Besitzform', 'spec.dev': 'Bauträger', 'spec.completion': 'Fertigstellung', 'spec.onreq': 'auf Anfrage',
+      'spec.from': 'ab', 'spec.upto': 'bis', 'spec.area': 'Fläche', 'spec.price': 'Preis', 'spec.yield': 'Rendite', 'spec.tenure': 'Besitzform', 'spec.dev': 'Bauträger', 'spec.completion': 'Fertigstellung', 'spec.onreq': 'auf Anfrage', 'spec.beds': 'Schlafzimmer', 'modal.about': 'Objektbeschreibung', 'modal.location': 'Lage', 'modal.mapopen': 'In Google Maps öffnen',
       'tour.badge': 'deutsche Betreuung', 'tour.answer': 'Antworten', 'tour.title': 'Buchen Sie eine <span class="mark">Online-Tour</span>',
       'tour.text': 'Wir zeigen Ihnen die Objekte Ihrer Wahl und berechnen die Rendite.', 'tour.submit': 'Termin buchen',
       'form.name': 'Name', 'form.name.ph': 'Ihr Name', 'form.phone': 'Telefon', 'form.phone.ph': '+49 …',
@@ -62,7 +62,7 @@
       'catalog.title': 'Find your ideal property', 'catalog.note': 'Real, publicly listed Bali properties. Figures & yields per source (linked in each detail).',
       'catalog.f.all': 'All', 'catalog.f.apartment': 'Apartments', 'catalog.f.villa': 'Villas', 'catalog.f.offplan': 'Off-plan', 'catalog.f.commercial': 'Commercial',
       'catalog.more': 'Learn more', 'catalog.empty': 'No properties in this category.',
-      'spec.from': 'from', 'spec.upto': 'up to', 'spec.area': 'Area', 'spec.price': 'Price', 'spec.yield': 'Yield', 'spec.tenure': 'Tenure', 'spec.dev': 'Developer', 'spec.completion': 'Completion', 'spec.onreq': 'on request',
+      'spec.from': 'from', 'spec.upto': 'up to', 'spec.area': 'Area', 'spec.price': 'Price', 'spec.yield': 'Yield', 'spec.tenure': 'Tenure', 'spec.dev': 'Developer', 'spec.completion': 'Completion', 'spec.onreq': 'on request', 'spec.beds': 'Bedrooms', 'modal.about': 'About this property', 'modal.location': 'Location', 'modal.mapopen': 'Open in Google Maps',
       'tour.badge': 'German-speaking support', 'tour.answer': 'Answer', 'tour.title': 'Book an <span class="mark">online tour</span>',
       'tour.text': 'We show you the properties of your choice and calculate the yield.', 'tour.submit': 'Book a slot',
       'form.name': 'Name', 'form.name.ph': 'Your name', 'form.phone': 'Phone', 'form.phone.ph': '+49 …',
@@ -101,7 +101,7 @@
       'catalog.title': 'Подберите свой идеальный объект', 'catalog.note': 'Реальные объекты Бали из открытых листингов. Данные и доходность — по источнику (ссылка в деталях).',
       'catalog.f.all': 'Все', 'catalog.f.apartment': 'Апартаменты', 'catalog.f.villa': 'Виллы', 'catalog.f.offplan': 'Новостройки', 'catalog.f.commercial': 'Коммерция',
       'catalog.more': 'Узнать больше', 'catalog.empty': 'В этой категории пока нет объектов.',
-      'spec.from': 'от', 'spec.upto': 'до', 'spec.area': 'Площадь', 'spec.price': 'Стоимость', 'spec.yield': 'Доходность', 'spec.tenure': 'Право', 'spec.dev': 'Застройщик', 'spec.completion': 'Сдача', 'spec.onreq': 'по запросу',
+      'spec.from': 'от', 'spec.upto': 'до', 'spec.area': 'Площадь', 'spec.price': 'Стоимость', 'spec.yield': 'Доходность', 'spec.tenure': 'Право', 'spec.dev': 'Застройщик', 'spec.completion': 'Сдача', 'spec.onreq': 'по запросу', 'spec.beds': 'Спальни', 'modal.about': 'Об объекте', 'modal.location': 'Расположение', 'modal.mapopen': 'Открыть в Google Maps',
       'tour.badge': 'немецкая поддержка', 'tour.answer': 'Ответить', 'tour.title': 'Запишитесь на <span class="mark">онлайн-тур</span>',
       'tour.text': 'Мы покажем заинтересовавшие вас объекты и рассчитаем доходность.', 'tour.submit': 'Записаться',
       'form.name': 'Имя', 'form.name.ph': 'Ваше имя', 'form.phone': 'Телефон', 'form.phone.ph': '+49 …',
@@ -140,7 +140,7 @@
       'catalog.title': 'Підберіть свій ідеальний обʼєкт', 'catalog.note': 'Реальні обʼєкти Балі з відкритих лістингів. Дані та дохідність — за джерелом (посилання в деталях).',
       'catalog.f.all': 'Усі', 'catalog.f.apartment': 'Апартаменти', 'catalog.f.villa': 'Вілли', 'catalog.f.offplan': 'Новобудови', 'catalog.f.commercial': 'Комерція',
       'catalog.more': 'Дізнатися більше', 'catalog.empty': 'У цій категорії поки немає обʼєктів.',
-      'spec.from': 'від', 'spec.upto': 'до', 'spec.area': 'Площа', 'spec.price': 'Вартість', 'spec.yield': 'Дохідність', 'spec.tenure': 'Право', 'spec.dev': 'Забудовник', 'spec.completion': 'Здача', 'spec.onreq': 'за запитом',
+      'spec.from': 'від', 'spec.upto': 'до', 'spec.area': 'Площа', 'spec.price': 'Вартість', 'spec.yield': 'Дохідність', 'spec.tenure': 'Право', 'spec.dev': 'Забудовник', 'spec.completion': 'Здача', 'spec.onreq': 'за запитом', 'spec.beds': 'Спальні', 'modal.about': 'Про обʼєкт', 'modal.location': 'Розташування', 'modal.mapopen': 'Відкрити в Google Maps',
       'tour.badge': 'німецька підтримка', 'tour.answer': 'Відповісти', 'tour.title': 'Запишіться на <span class="mark">онлайн-тур</span>',
       'tour.text': 'Ми покажемо обрані вами обʼєкти та розрахуємо дохідність.', 'tour.submit': 'Записатися',
       'form.name': 'Імʼя', 'form.name.ph': 'Ваше імʼя', 'form.phone': 'Телефон', 'form.phone.ph': '+49 …',
@@ -174,40 +174,97 @@
      Parameters (developer, district, area, price, tenure, yield) taken from the
      linked source listings. Prices ~ converted to EUR (1 EUR ≈ 1.08 USD).
      Yields are developer/market estimates as stated by the source. ---------------- */
+  const G = 'assets/img/obj/';
   const OBJECTS = [
     { id: 'newcanggu', type: 'offplan', name: 'The New Canggu', dev: 'Bright Solution Property', loc: 'Padonan · Canggu',
-      area: 98, price: 115000, yieldTxt: '13–16 %', tenure: 'Leasehold 25 J. (+5)', done: '2026',
-      img: 'assets/img/obj/newcanggu.jpg', pos: '50% 55%',
-      source: 'https://brightsolutionproperty.com/blog/off-plan-project-padonan-villas-in-canggu-bali' },
+      area: 98, beds: '1–3', price: 115000, yieldTxt: '13–16 %', tenure: 'Leasehold 25 J. (+5)', done: '2026',
+      img: G + 'newcanggu.jpg', pos: '50% 55%', coords: [-8.645, 115.133], feat: ['pool', 'newbuild', 'managed', 'beachnear'],
+      gallery: [G + 'newcanggu.jpg', G + 'g/newcanggu-2.jpg', G + 'g/newcanggu-3.jpg', G + 'g/newcanggu-4.jpg'],
+      source: 'https://brightsolutionproperty.com/blog/off-plan-project-padonan-villas-in-canggu-bali',
+      desc: { de: 'Off-Plan-Projekt in Padonan (Canggu) mit 1- bis 3-Zimmer-Einheiten und privatem Pool. Fertigstellung 2026, 25 Jahre Leasehold mit 5-Jahres-Verlängerung; vom Bauträger angegebene Rendite 13–16 % über 7 Jahre.',
+              en: 'Off-plan project in Padonan (Canggu) with 1–3-bedroom units and a private pool. Completion 2026, 25-year leasehold with a 5-year extension; developer-stated yield 13–16 % over 7 years.',
+              ru: 'Проект на стадии строительства в Падонане (Чангу): юниты 1–3 спальни с собственным бассейном. Сдача 2026, лизхолд 25 лет (+5); заявленная застройщиком доходность 13–16 % за 7 лет.',
+              uk: 'Проєкт на етапі будівництва в Падонані (Чангу): юніти 1–3 спальні з власним басейном. Здача 2026, лізхолд 25 років (+5); заявлена забудовником дохідність 13–16 % за 7 років.' } },
     { id: 'karmabeach', type: 'offplan', name: 'Karma Beach Villa', dev: 'BBB Developments', loc: 'Uluwatu · Pecatu',
-      area: 145, price: 106000, yieldTxt: '~18 %', tenure: 'Leasehold 35 J.', done: '2026',
-      img: 'assets/img/obj/karmabeach.jpg', pos: '50% 55%',
-      source: 'https://www.balivillahub.com/en/property-details/uluwatu/offplan-uluwatu-karma-beach-ocean-views-2-11346' },
+      area: 145, beds: '2', price: 106000, yieldTxt: '~18 %', tenure: 'Leasehold 35 J.', done: '2026',
+      img: G + 'karmabeach.jpg', pos: '50% 55%', coords: [-8.829, 115.087], feat: ['oceanview', 'pool', 'newbuild', 'managed'],
+      gallery: [G + 'karmabeach.jpg', G + 'g/karmabeach-2.jpg', G + 'g/karmabeach-3.jpg', G + 'g/karmabeach-4.jpg', G + 'g/karmabeach-5.jpg'],
+      source: 'https://www.balivillahub.com/en/property-details/uluwatu/offplan-uluwatu-karma-beach-ocean-views-2-11346',
+      desc: { de: 'Neubau-Villa mit 2 Schlafzimmern und Meerblick in Pecatu (Uluwatu), Land 140 m² / Wohnfläche 145 m². 35 Jahre Leasehold; geschätzte jährliche Rendite ca. 18 %.',
+              en: 'Off-plan 2-bedroom ocean-view villa in Pecatu (Uluwatu), 140 m² land / 145 m² built. 35-year leasehold; estimated annual return ~18 %.',
+              ru: 'Строящаяся вилла с 2 спальнями и видом на океан в Печату (Улувату): участок 140 м² / застройка 145 м². Лизхолд 35 лет; оценочная доходность ~18 % в год.',
+              uk: 'Вілла на стадії будівництва з 2 спальнями та видом на океан у Печату (Улувату): ділянка 140 м² / забудова 145 м². Лізхолд 35 років; оцінкова дохідність ~18 % на рік.' } },
     { id: 'bingincliff', type: 'offplan', name: 'Bingin Cliff Villa', dev: 'Compass Realty Bali', loc: 'Uluwatu · Bingin',
-      area: 145, price: 190000, yieldTxt: '~15 %', tenure: 'Leasehold 24 J.', done: '2027',
-      img: 'assets/img/obj/bingincliff.jpg', pos: '50% 55%',
-      source: 'https://www.balivillahub.com/en/property-details/uluwatu/off-plan-villa-walking-distance-to-bingin-cliff-10907' },
+      area: 145, beds: '2', price: 190000, yieldTxt: '~15 %', tenure: 'Leasehold 24 J.', done: '2027',
+      img: G + 'bingincliff.jpg', pos: '50% 55%', coords: [-8.807, 115.113], feat: ['pool', 'cliffwalk', 'oceanview', 'newbuild'],
+      gallery: [G + 'bingincliff.jpg', G + 'g/bingincliff-2.jpg', G + 'g/bingincliff-3.jpg', G + 'g/bingincliff-4.jpg', G + 'g/bingincliff-5.jpg', G + 'g/bingincliff-6.jpg'],
+      source: 'https://www.balivillahub.com/en/property-details/uluwatu/off-plan-villa-walking-distance-to-bingin-cliff-10907',
+      desc: { de: 'Neubau-Villa mit 2 Schlafzimmern in Gehweite zur Bingin-Klippe (Uluwatu), Land 110 m² / Wohnfläche 145 m². 24 Jahre Leasehold mit Verlängerungsoption; geschätzte Rendite ca. 15 %.',
+              en: 'Off-plan 2-bedroom villa within walking distance of Bingin cliff (Uluwatu), 110 m² land / 145 m² built. 24-year leasehold with extension option; estimated yield ~15 %.',
+              ru: 'Строящаяся вилла с 2 спальнями в пешей доступности от скалы Бингин (Улувату): участок 110 м² / застройка 145 м². Лизхолд 24 года с опцией продления; оценочная доходность ~15 %.',
+              uk: 'Вілла на стадії будівництва з 2 спальнями за кілька хвилин від скелі Бінгін (Улувату): ділянка 110 м² / забудова 145 м². Лізхолд 24 роки з опцією подовження; оцінкова дохідність ~15 %.' } },
     { id: 'munggu', type: 'villa', name: 'Boho Japandi Villa', dev: 'Bali Villa Realty', loc: 'Munggu · Mengwi',
-      area: 260, price: 360000, yieldTxt: null, tenure: 'Leasehold 32 J.', done: '2025',
-      img: 'assets/img/obj/munggu.jpg', pos: '50% 55%',
-      source: 'https://balivillarealty.com/villa/sale/seseh/munggu/boho-japandi-2br-leasehold-villa-with-dual-pools-rooftop-in-munggu/' },
+      area: 260, beds: '2', price: 360000, yieldTxt: null, tenure: 'Leasehold 32 J.', done: '2025',
+      img: G + 'munggu.jpg', pos: '50% 55%', coords: [-8.625, 115.113], feat: ['dualpool', 'rooftop', 'furnished', 'managed'],
+      gallery: [G + 'munggu.jpg', G + 'g/munggu-1.jpg', G + 'g/munggu-2.jpg', G + 'g/munggu-4.jpg'],
+      source: 'https://balivillarealty.com/villa/sale/seseh/munggu/boho-japandi-2br-leasehold-villa-with-dual-pools-rooftop-in-munggu/',
+      desc: { de: 'Freistehende 2-Zimmer-Villa im Boho-Japandi-Stil in Munggu mit zwei Pools und Dachterrasse. Land 125 m² / Wohnfläche 260 m², 32 Jahre Leasehold, Baujahr 2025.',
+              en: 'Detached 2-bedroom Boho-Japandi villa in Munggu with dual pools and a rooftop terrace. 125 m² land / 260 m² built, 32-year leasehold, built 2025.',
+              ru: 'Отдельная вилла с 2 спальнями в стиле бохо-джапанди в Мунггу: два бассейна и крыша-терраса. Участок 125 м² / застройка 260 м², лизхолд 32 года, постройка 2025.',
+              uk: 'Окрема вілла з 2 спальнями в стилі бохо-джапанді в Мунггу: два басейни та дах-тераса. Ділянка 125 м² / забудова 260 м², лізхолд 32 роки, побудова 2025.' } },
     { id: 'ubud', type: 'villa', name: 'Ricefield Villa Ubud', dev: 'Bali Villa Realty', loc: 'Ubud · Gianyar',
-      area: 176, price: 220000, yieldTxt: null, tenure: 'Freehold (Hak Milik)', done: '2022',
-      img: 'assets/img/obj/ubud.jpg', pos: '50% 55%',
-      source: 'https://balivillarealty.com/villa/sale/ubud/modern-2br-freehold-rice-field-view-villa-in-ubud/' },
+      area: 176, beds: '2', price: 220000, yieldTxt: null, tenure: 'Freehold (Hak Milik)', done: '2022',
+      img: G + 'ubud.jpg', pos: '50% 55%', coords: [-8.507, 115.263], feat: ['pool', 'ricefield', 'furnished', 'jungle'],
+      gallery: [G + 'ubud.jpg', G + 'g/ubud-1.jpg', G + 'g/ubud-2.jpg', G + 'g/ubud-3.jpg', G + 'g/ubud-4.jpg', G + 'g/ubud-5.jpg'],
+      source: 'https://balivillarealty.com/villa/sale/ubud/modern-2br-freehold-rice-field-view-villa-in-ubud/',
+      desc: { de: 'Moderne 2-Zimmer-Villa mit Reisfeldblick in Ubud, Freehold (Hak Milik). Land 216 m² / Wohnfläche 176 m², fertiggestellt 2022, privater Pool.',
+              en: 'Modern 2-bedroom villa with rice-field view in Ubud, freehold (Hak Milik). 216 m² land / 176 m² built, completed 2022, private pool.',
+              ru: 'Современная вилла с 2 спальнями и видом на рисовые поля в Убуде, freehold (Hak Milik). Участок 216 м² / застройка 176 м², сдана 2022, собственный бассейн.',
+              uk: 'Сучасна вілла з 2 спальнями та видом на рисові поля в Убуді, freehold (Hak Milik). Ділянка 216 м² / забудова 176 м², здана 2022, власний басейн.' } },
     { id: 'canggumed', type: 'villa', name: 'Mediterran Villa Canggu', dev: 'Bali Villa Realty', loc: 'Canggu · Tibubeneng',
-      area: 100, price: 150000, yieldTxt: null, tenure: 'Leasehold 27 J.', done: '2026',
-      img: 'assets/img/obj/canggumed.jpg', pos: '50% 60%',
-      source: 'https://balivillarealty.com/villa/sale/canggu/luxury-2br-mediterranean-leasehold-villa-with-pool-in-prime-canggu/' },
+      area: 100, beds: '2', price: 150000, yieldTxt: null, tenure: 'Leasehold 27 J.', done: '2026',
+      img: G + 'canggumed.jpg', pos: '50% 60%', coords: [-8.652, 115.138], feat: ['pool', 'furnished', 'managed'],
+      gallery: [G + 'canggumed.jpg', G + 'g/canggumed-2.jpg', G + 'g/canggumed-3.jpg', G + 'g/canggumed-4.jpg', G + 'g/canggumed-5.jpg', G + 'g/canggumed-6.jpg'],
+      source: 'https://balivillarealty.com/villa/sale/canggu/luxury-2br-mediterranean-leasehold-villa-with-pool-in-prime-canggu/',
+      desc: { de: 'Mediterran gestaltete 2-Zimmer-Villa mit Pool in zentraler Lage in Canggu (Tibubeneng). Land 200 m² / Wohnfläche 100 m², 27 Jahre Leasehold, schlüsselfertig 2026.',
+              en: 'Mediterranean-style 2-bedroom villa with pool in central Canggu (Tibubeneng). 200 m² land / 100 m² built, 27-year leasehold, turnkey 2026.',
+              ru: 'Вилла с 2 спальнями в средиземноморском стиле и бассейном в центре Чангу (Тибубенеанг). Участок 200 м² / застройка 100 м², лизхолд 27 лет, под ключ 2026.',
+              uk: 'Вілла з 2 спальнями в середземноморському стилі та басейном у центрі Чангу (Тібубенеанг). Ділянка 200 м² / забудова 100 м², лізхолд 27 років, під ключ 2026.' } },
     { id: 'binginapt', type: 'apartment', name: 'Bingin Designer Suite', dev: 'Bali Villa Realty', loc: 'Uluwatu · Bingin',
-      area: 90, price: 140000, yieldTxt: null, tenure: 'Leasehold 32 J.', done: 'Neubau',
-      img: 'assets/img/obj/binginapt.jpg', pos: '50% 50%',
-      source: 'https://balivillarealty.com/apartment/sale/uluwatu/bingin/high-yield-off-plan-opportunity-90m%c2%b2-designer-sanctuary-in-bingin-prime-32-year-leasehold/' },
+      area: 90, beds: '2', price: 140000, yieldTxt: null, tenure: 'Leasehold 32 J.', done: 'Neubau',
+      img: G + 'binginapt.jpg', pos: '50% 50%', coords: [-8.807, 115.113], feat: ['pool', 'newbuild', 'beachnear'],
+      gallery: [G + 'binginapt.jpg', G + 'g/binginapt-1.jpg', G + 'g/binginapt-3.jpg', G + 'g/binginapt-4.jpg', G + 'g/binginapt-5.jpg', G + 'g/binginapt-6.jpg'],
+      source: 'https://balivillarealty.com/apartment/sale/uluwatu/bingin/high-yield-off-plan-opportunity-90m%c2%b2-designer-sanctuary-in-bingin-prime-32-year-leasehold/',
+      desc: { de: 'Design-Apartment mit 2 Schlafzimmern (90 m²) in Bingin (Uluwatu), Neubau. 32 Jahre Leasehold, als renditestarke Off-Plan-Gelegenheit vermarktet.',
+              en: '2-bedroom designer apartment (90 m²) in Bingin (Uluwatu), off-plan. 32-year leasehold, marketed as a high-yield opportunity.',
+              ru: 'Дизайнерские апартаменты с 2 спальнями (90 м²) в Бингине (Улувату), новостройка. Лизхолд 32 года; позиционируются как высокодоходный off-plan объект.',
+              uk: 'Дизайнерські апартаменти з 2 спальнями (90 м²) у Бінгіні (Улувату), новобудова. Лізхолд 32 роки; позиціонуються як високодохідний off-plan обʼєкт.' } },
     { id: 'hotelulu', type: 'commercial', name: 'Boutique-Hotel Uluwatu', dev: 'Harcourts Purba Bali', loc: 'Uluwatu · Pecatu',
-      area: 2225, price: 3500000, yieldTxt: '9–12 %', tenure: 'Freehold (HGB)', done: '2027',
-      img: 'assets/img/obj/hotelulu.jpg', pos: '50% 55%',
-      source: 'https://harcourtspurbabali.com/property/rare-ocean-view-boutique-hotel-investment-in-uluwatu/' }
+      area: 2225, beds: '18', price: 3500000, yieldTxt: '9–12 %', tenure: 'Freehold (HGB)', done: '2027',
+      img: G + 'hotelulu.jpg', pos: '50% 55%', coords: [-8.815, 115.095], feat: ['oceanview', 'hotel', 'pool', 'managed'],
+      gallery: [G + 'hotelulu.jpg', G + 'g/hotelulu-5.jpg'],
+      source: 'https://harcourtspurbabali.com/property/rare-ocean-view-boutique-hotel-investment-in-uluwatu/',
+      desc: { de: 'Boutique-Hotel-Investment mit Meerblick in Pecatu (Uluwatu): 18 Zimmer, Grundstück 1.000 m² / Gebäude 2.225 m². Freehold (HGB); prognostizierte Rendite 9–12 %, Betriebsstart 2027.',
+              en: 'Ocean-view boutique-hotel investment in Pecatu (Uluwatu): 18 rooms, 1,000 m² land / 2,225 m² building. Freehold (HGB); projected yield 9–12 %, operations from 2027.',
+              ru: 'Инвестиция в бутик-отель с видом на океан в Печату (Улувату): 18 номеров, участок 1 000 м² / здание 2 225 м². Freehold (HGB); прогноз доходности 9–12 %, запуск 2027.',
+              uk: 'Інвестиція в бутик-готель з видом на океан у Печату (Улувату): 18 номерів, ділянка 1 000 м² / будівля 2 225 м². Freehold (HGB); прогноз дохідності 9–12 %, запуск 2027.' } }
   ];
+
+  /* feature labels (real, translatable) */
+  const FEAT = {
+    pool: { de: 'Privatpool', en: 'Private pool', ru: 'Бассейн', uk: 'Басейн' },
+    dualpool: { de: 'Zwei Pools', en: 'Dual pools', ru: 'Два бассейна', uk: 'Два басейни' },
+    oceanview: { de: 'Meerblick', en: 'Ocean view', ru: 'Вид на океан', uk: 'Вид на океан' },
+    ricefield: { de: 'Reisfeldblick', en: 'Rice-field view', ru: 'Вид на рисовые поля', uk: 'Вид на рисові поля' },
+    rooftop: { de: 'Dachterrasse', en: 'Rooftop terrace', ru: 'Крыша-терраса', uk: 'Дах-тераса' },
+    furnished: { de: 'Möbliert', en: 'Furnished', ru: 'С мебелью', uk: 'З меблями' },
+    managed: { de: 'Verwaltung inkl.', en: 'Managed', ru: 'Управление', uk: 'Управління' },
+    jungle: { de: 'Naturlage', en: 'Green setting', ru: 'Природа рядом', uk: 'Природа поруч' },
+    cliffwalk: { de: 'Nähe Klippen', en: 'Near the cliffs', ru: 'Рядом скалы', uk: 'Поруч скелі' },
+    beachnear: { de: 'Strandnähe', en: 'Near the beach', ru: 'Рядом пляж', uk: 'Поруч пляж' },
+    newbuild: { de: 'Neubau', en: 'New build', ru: 'Новостройка', uk: 'Новобудова' },
+    hotel: { de: 'Hotelbetrieb', en: 'Hotel operation', ru: 'Гостиница', uk: 'Готель' }
+  };
 
   let currentFilter = 'all';
 
@@ -266,33 +323,103 @@
 
   /* ---------------- modal ---------------- */
   let lastFocus = null;
+  let gal = { imgs: [], i: 0 };
+  let lmap = null, lmarker = null;
+
+  function showMap(lat, lng, label) {
+    const el = $('#modalMap');
+    if (!window.L) { el.innerHTML = '<div class="modal__mapfallback">' + label + '</div>'; return; }
+    if (!lmap) {
+      lmap = L.map(el, { scrollWheelZoom: false }).setView([lat, lng], 13);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '© OpenStreetMap' }).addTo(lmap);
+      lmarker = L.marker([lat, lng]).addTo(lmap);
+    } else {
+      lmap.setView([lat, lng], 13);
+      lmarker.setLatLng([lat, lng]);
+    }
+    setTimeout(function () { if (lmap) lmap.invalidateSize(); }, 240);
+  }
+
+  function renderGallery() {
+    const main = $('#galMain');
+    main.src = gal.imgs[gal.i];
+    $('#galCount').textContent = (gal.i + 1) + ' / ' + gal.imgs.length;
+    $$('#galThumbs img').forEach((th, idx) => th.setAttribute('aria-current', String(idx === gal.i)));
+    const active = $$('#galThumbs img')[gal.i];
+    if (active && active.scrollIntoView) active.scrollIntoView({ block: 'nearest', inline: 'center' });
+  }
+  function galGo(dir) {
+    if (!gal.imgs.length) return;
+    gal.i = (gal.i + dir + gal.imgs.length) % gal.imgs.length;
+    renderGallery();
+  }
+
   function openModal(id) {
     const o = OBJECTS.find(x => x.id === id); if (!o) return;
     lastFocus = document.activeElement;
-    $('#modalImg').src = o.img; $('#modalImg').style.objectPosition = o.pos; $('#modalImg').alt = o.name;
+
+    // gallery
+    gal = { imgs: (o.gallery && o.gallery.length ? o.gallery : [o.img]), i: 0 };
+    $('#modalGallery').classList.toggle('gallery--single', gal.imgs.length < 2);
+    $('#galThumbs').innerHTML = gal.imgs.map((src, i) =>
+      `<img src="${src}" alt="${o.name} — Foto ${i + 1}" data-gi="${i}" aria-current="${i === 0}">`).join('');
+    $('#galMain').alt = o.name;
+    renderGallery();
+
+    // head
     $('#modalTitle').textContent = o.name;
-    $('#modalLoc').textContent = o.loc + ' · ' + t('catalog.f.' + o.type);
+    $('#modalLoc').innerHTML = '<svg><use href="#i-pin"/></svg>' + o.loc + ' · ' + t('catalog.f.' + o.type);
+
+    // specs (7)
     $('#modalSpecs').innerHTML = [
       ['spec.area', t('spec.from') + ' ' + o.area + ' m²'],
+      ['spec.beds', o.beds],
       ['spec.price', t('spec.from') + ' ' + fmtEUR(o.price) + ' €'],
       ['spec.yield', o.yieldTxt || t('spec.onreq')],
-      ['spec.dev', o.dev],
       ['spec.tenure', o.tenure],
-      ['spec.completion', o.done]
+      ['spec.completion', o.done],
+      ['spec.dev', o.dev]
     ].map(([k, v]) => `<div class="spec"><div class="spec__k">${t(k)}</div><div class="spec__v">${v}</div></div>`).join('');
-    const host = (function(){ try { return new URL(o.source).hostname.replace('www.', ''); } catch (e) { return o.source; } })();
-    $('#modalDesc').innerHTML = t('modal.note') +
+
+    // description + features
+    $('#modalDesc').textContent = (o.desc && (o.desc[lang] || o.desc.de)) || '';
+    $('#modalFeats').innerHTML = (o.feat || []).map(k => `<li>${(FEAT[k] && (FEAT[k][lang] || FEAT[k].de)) || k}</li>`).join('');
+
+    // map (Leaflet + OSM raster tiles — keyless, no WebGL) + Google Maps link
+    const [lat, lng] = o.coords || [-8.65, 115.13];
+    showMap(lat, lng, o.loc);
+    $('#modalMapLink').innerHTML =
+      `<a href="https://www.google.com/maps/search/?api=1&query=${lat}%2C${lng}" target="_blank" rel="noopener" class="modal__src">${t('modal.mapopen')} ↗</a>`;
+
+    // source + bar price
+    const host = (function () { try { return new URL(o.source).hostname.replace('www.', ''); } catch (e) { return o.source; } })();
+    $('#modalSrc').innerHTML = t('modal.note') +
       ' <a href="' + o.source + '" target="_blank" rel="noopener nofollow" class="modal__src">' + t('modal.source') + ': ' + host + ' ↗</a>';
+    $('#modalBarPrice').textContent = t('spec.from') + ' ' + fmtEUR(o.price) + ' €';
+
+    $('#modalScroll').scrollTop = 0;
     const m = $('#modal'); m.classList.add('open'); document.body.style.overflow = 'hidden';
     $('.modal__close').focus();
   }
   function closeModal() {
     $('#modal').classList.remove('open'); document.body.style.overflow = '';
-    if (lastFocus) lastFocus.focus();
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
   }
   function bindModal() {
-    $('#modal').addEventListener('click', e => { if (e.target.hasAttribute('data-close')) closeModal(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('#modal').classList.contains('open')) closeModal(); });
+    // use closest so clicks on inner <svg>/<use> of [data-close] still close
+    $('#modal').addEventListener('click', e => { if (e.target.closest('[data-close]')) closeModal(); });
+    document.addEventListener('keydown', e => {
+      if (!$('#modal').classList.contains('open')) return;
+      if (e.key === 'Escape') closeModal();
+      else if (e.key === 'ArrowRight') galGo(1);
+      else if (e.key === 'ArrowLeft') galGo(-1);
+    });
+    $('#galPrev').addEventListener('click', () => galGo(-1));
+    $('#galNext').addEventListener('click', () => galGo(1));
+    $('#galThumbs').addEventListener('click', e => {
+      const th = e.target.closest('[data-gi]'); if (!th) return;
+      gal.i = +th.dataset.gi; renderGallery();
+    });
   }
 
   /* ---------------- toast ---------------- */

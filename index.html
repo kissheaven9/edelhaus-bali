@@ -8,7 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=6">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="assets/css/styles.css?v=8">
 </head>
 <body>
 
@@ -309,20 +311,50 @@
   </div>
 </footer>
 
-<!-- ===== Modal ===== -->
+<!-- ===== Modal (object detail) ===== -->
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
   <div class="modal__overlay" data-close></div>
   <div class="modal__dialog">
     <button class="modal__close" data-close aria-label="Schließen"><svg><use href="#i-close"/></svg></button>
-    <div class="modal__media"><img id="modalImg" src="" alt=""></div>
-    <div class="modal__body">
-      <h3 class="modal__title" id="modalTitle"></h3>
-      <div class="modal__loc" id="modalLoc"></div>
+
+    <!-- gallery -->
+    <div class="gallery" id="modalGallery">
+      <div class="gallery__stage">
+        <img id="galMain" src="" alt="">
+        <button class="gallery__nav gallery__nav--prev" id="galPrev" aria-label="Zurück"><svg><use href="#i-chevron"/></svg></button>
+        <button class="gallery__nav gallery__nav--next" id="galNext" aria-label="Weiter"><svg><use href="#i-chevron"/></svg></button>
+        <span class="gallery__count" id="galCount"></span>
+      </div>
+      <div class="gallery__thumbs" id="galThumbs"></div>
+    </div>
+
+    <!-- scrollable content -->
+    <div class="modal__scroll" id="modalScroll">
+      <div class="modal__head">
+        <div>
+          <h3 class="modal__title" id="modalTitle"></h3>
+          <div class="modal__loc" id="modalLoc"></div>
+        </div>
+      </div>
       <div class="modal__specs" id="modalSpecs"></div>
+
+      <h4 class="modal__h" data-i18n="modal.about">Objektbeschreibung</h4>
       <p class="modal__desc" id="modalDesc"></p>
-      <div class="modal__cta">
+      <ul class="modal__feats" id="modalFeats"></ul>
+
+      <h4 class="modal__h" data-i18n="modal.location">Lage</h4>
+      <div class="modal__map" id="modalMap"></div>
+      <p class="modal__maplink" id="modalMapLink"></p>
+
+      <p class="modal__srcline" id="modalSrc"></p>
+    </div>
+
+    <!-- sticky action bar -->
+    <div class="modal__bar">
+      <div class="modal__barprice"><span class="modal__barprice-k" data-i18n="spec.price"></span><span id="modalBarPrice"></span></div>
+      <div class="modal__baractions">
+        <a class="btn btn--light btn--sm" href="tel:+4980012345" data-i18n="modal.call">Rückruf anfordern</a>
         <a class="btn btn--accent" href="#kontakt" data-close data-i18n="modal.cta">Online-Tour buchen</a>
-        <a class="btn btn--light" href="tel:+4980012345" data-i18n="modal.call">Rückruf anfordern</a>
       </div>
     </div>
   </div>
@@ -342,6 +374,6 @@
 
 <div class="toast-wrap" id="toasts"></div>
 
-<script src="assets/js/app.js?v=4"></script>
+<script src="assets/js/app.js?v=6"></script>
 </body>
 </html>
