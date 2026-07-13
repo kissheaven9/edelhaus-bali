@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<link rel="stylesheet" href="assets/css/styles.css?v=8">
+<link rel="stylesheet" href="assets/css/styles.css?v=9">
 </head>
 <body>
 
@@ -149,8 +149,10 @@
     <div class="tour reveal">
       <div class="tour__grid">
         <div class="tour__visual">
-          <img class="bg" src="assets/img/onlinetour-villa.jpg" alt="Villa bei Nacht">
-          <div class="tour__badge" data-i18n="tour.badge">deutsche Betreuung</div>
+          <div class="tour__img">
+            <img class="bg" src="assets/img/onlinetour-villa.jpg" alt="Villa bei Nacht">
+            <div class="tour__badge" data-i18n="tour.badge">deutsche Betreuung</div>
+          </div>
           <div class="phone">
             <img src="assets/img/onlinetour-person.jpg" alt="Berater im Video-Call">
             <button class="phone__answer" id="phoneAnswer">
@@ -160,6 +162,7 @@
           </div>
         </div>
         <div class="tour__form">
+          <div class="tour__brand">edelhaus</div>
           <h2 data-i18n-html="tour.title">Buchen Sie eine <span class="mark">Online-Tour</span></h2>
           <p data-i18n="tour.text">Wir zeigen Ihnen die Objekte Ihrer Wahl und berechnen die Rendite.</p>
           <form class="form" id="tourForm" novalidate>
@@ -187,7 +190,7 @@
 <!-- ===== Vorteile ===== -->
 <section class="section" id="vorteile">
   <div class="container">
-    <h2 class="h-sec reveal" data-i18n="vorteile.title">Ihre Vorteile mit edelhaus</h2>
+    <h2 class="h-sec reveal" data-i18n-html="vorteile.title">Ihre Vorteile mit <span class="brand-inline">edelhaus</span></h2>
     <div class="vorteile">
       <article class="vcard reveal">
         <h3 data-i18n="v.exp.t">Erfahrung</h3>
@@ -235,28 +238,29 @@
     <div class="leistungen">
       <div class="lcol reveal">
         <div class="lcol--media"><img src="assets/img/service-couple.jpg" alt="Beratung bei edelhaus"></div>
-        <article class="lcard">
-          <h3 data-i18n="l.support.t">Begleitung in allen Phasen</h3>
-          <p data-i18n="l.support.d">Vom ersten Anruf bis zur Eigentumsübertragung sind wir an Ihrer Seite.</p>
-          <span class="lcard__icon"><svg><use href="#ic-support"/></svg></span>
-        </article>
-      </div>
-      <div class="lcol reveal">
         <article class="lcard lcard--dark">
           <h3 data-i18n="l.manage.t">Immobilienverwaltung</h3>
           <p data-i18n="l.manage.d">Komplettservice: Vermietung, Wartung, Reporting und Pflege Ihres Objekts.</p>
           <span class="lcard__icon"><svg><use href="#ic-manage"/></svg></span>
         </article>
         <article class="lcard">
-          <h3 data-i18n="l.indiv.t">Individueller Ansatz</h3>
-          <p data-i18n="l.indiv.d">Wir wählen Objekt und Konditionen passend zu Zielen und Lebensstil — vom Investor bis zum Digital Nomad.</p>
-          <span class="lcard__icon"><svg><use href="#ic-individual"/></svg></span>
-        </article>
-        <article class="lcard lcard--dark">
           <h3 data-i18n="l.legal.t">Rechtssicherheit</h3>
           <p data-i18n="l.legal.d">Wir arbeiten mit geprüften Juristen und sichern eine saubere Transaktion.</p>
           <span class="lcard__icon"><svg><use href="#ic-legal"/></svg></span>
         </article>
+      </div>
+      <div class="lcol reveal">
+        <article class="lcard">
+          <h3 data-i18n="l.support.t">Begleitung in allen Phasen</h3>
+          <p data-i18n="l.support.d">Vom ersten Anruf bis zur Eigentumsübertragung sind wir an Ihrer Seite.</p>
+          <span class="lcard__icon"><svg><use href="#ic-support"/></svg></span>
+        </article>
+        <article class="lcard lcard--dark">
+          <h3 data-i18n="l.indiv.t">Individueller Ansatz</h3>
+          <p data-i18n="l.indiv.d">Wir wählen Objekt und Konditionen passend zu Zielen und Lebensstil — vom Investor bis zum Digital Nomad.</p>
+          <span class="lcard__icon"><svg><use href="#ic-individual"/></svg></span>
+        </article>
+        <div class="lcol--media"><img src="assets/img/clients-family.jpg" alt="Kundenbetreuung bei edelhaus"></div>
       </div>
     </div>
   </div>
@@ -374,6 +378,6 @@
 
 <div class="toast-wrap" id="toasts"></div>
 
-<script src="assets/js/app.js?v=6"></script>
+<script src="assets/js/app.js?v=7"></script>
 </body>
 </html>
