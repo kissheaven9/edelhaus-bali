@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Objekt — edelhaus</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="assets/css/styles.css?v=9">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="11" r="2.6"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 2.6 15 0 18M12 3c-2.6 2.5-2.6 15 0 18"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5 9 4l1 4-2 1.5a11 11 0 0 0 4.5 4.5L14 16l4 1 .5 2.5a2 2 0 0 1-2 2.3A16.5 16.5 0 0 1 4.2 5.5a2 2 0 0 1 2.3-2Z"/></symbol>
+</defs></svg>
+
+<!-- ===== Header ===== -->
+<header class="op-header">
+  <div class="container header__row">
+    <a href="index.html" class="brand">edelhaus</a>
+    <a href="index.html#katalog" class="op-back" style="margin-left:26px"><svg><use href="#i-chevron"/></svg><span data-i18n="obj.back">Zurück zum Katalog</span></a>
+    <div class="header__spacer"></div>
+    <div class="header__tools">
+      <div class="lang" id="lang">
+        <button class="pill lang__btn" id="langBtn" aria-haspopup="true" aria-expanded="false" style="border-color:var(--line)">
+          <svg><use href="#i-globe"/></svg><span id="langCur">DE</span><svg class="lang__caret"><use href="#i-chevron"/></svg>
+        </button>
+        <div class="lang__menu" role="menu" id="langMenu">
+          <button data-lang="de" role="menuitem"><span class="lang__flag">🇩🇪</span> Deutsch</button>
+          <button data-lang="en" role="menuitem"><span class="lang__flag">🇬🇧</span> English</button>
+          <button data-lang="ru" role="menuitem"><span class="lang__flag">🇷🇺</span> Русский</button>
+          <button data-lang="uk" role="menuitem"><span class="lang__flag">🇺🇦</span> Українська</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="op-main container" id="op-main">
+  <!-- filled by objekt.js -->
+</main>
+
+<template id="op-template">
+  <div class="op-head">
+    <div>
+      <span class="op-badge" data-f="badge"></span>
+      <h1 class="op-title" data-f="title"></h1>
+      <div class="op-loc"><svg><use href="#i-pin"/></svg><span data-f="loc"></span></div>
+    </div>
+    <div class="op-priceblock">
+      <div class="k" data-i18n="spec.price"></div>
+      <div class="v" data-f="price"></div>
+    </div>
+  </div>
+
+  <div class="op-gallery">
+    <div class="op-stage">
+      <img id="opMain" src="" alt="">
+      <button class="op-nav op-nav--prev" id="opPrev" aria-label="Zurück"><svg><use href="#i-chevron"/></svg></button>
+      <button class="op-nav op-nav--next" id="opNext" aria-label="Weiter"><svg><use href="#i-chevron"/></svg></button>
+      <span class="op-count" id="opCount"></span>
+    </div>
+    <div class="op-thumbs" id="opThumbs"></div>
+  </div>
+
+  <div class="op-grid">
+    <div>
+      <div class="op-section">
+        <h2 class="op-h" data-i18n="modal.about"></h2>
+        <div class="op-desc" data-f="desc"></div>
+      </div>
+      <div class="op-section">
+        <h2 class="op-h" data-i18n="obj.features"></h2>
+        <ul class="op-feats" data-f="feats"></ul>
+      </div>
+      <div class="op-section">
+        <h2 class="op-h" data-i18n="modal.location"></h2>
+        <div class="op-map" id="opMap"></div>
+        <p style="margin-top:8px"><a class="op-src" data-f="maplink" target="_blank" rel="noopener"></a></p>
+      </div>
+    </div>
+
+    <aside class="op-side">
+      <div class="op-specs" data-f="specs"></div>
+      <a class="btn btn--accent" data-f="cta" href="index.html#kontakt" data-i18n="modal.cta"></a>
+      <a class="btn btn--light" href="tel:+4980012345" data-i18n="modal.call"></a>
+      <p class="op-srcline" data-f="srcline"></p>
+    </aside>
+  </div>
+</template>
+
+<script src="assets/js/data.js?v=1"></script>
+<script src="assets/js/descriptions.js?v=1"></script>
+<script src="assets/js/objekt.js?v=1"></script>
+</body>
+</html>
