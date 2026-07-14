@@ -26,9 +26,64 @@
 
   function applyStatic() {
     $$('[data-i18n]').forEach(el => { el.textContent = t(el.getAttribute('data-i18n')); });
+    $$('[data-i18n-html]').forEach(el => { el.innerHTML = t(el.getAttribute('data-i18n-html')); });
+    $$('[data-i18n-ph]').forEach(el => { el.setAttribute('placeholder', t(el.getAttribute('data-i18n-ph'))); });
     document.documentElement.lang = lang;
     $('#langCur').textContent = lang.toUpperCase();
     $$('#langMenu button').forEach(b => b.setAttribute('aria-current', String(b.dataset.lang === lang)));
+  }
+
+  /* ---------------- toast + forms ---------------- */
+  function toast(msg) {
+    const wrap = $('#toasts'); if (!wrap) return;
+    const el = document.createElement('div');
+    el.className = 'toast';
+    el.innerHTML = '<svg><use href="#i-check"/></svg><span></span>';
+    el.querySelector('span').textContent = msg;
+    wrap.appendChild(el);
+    setTimeout(() => { el.style.opacity = '0'; el.style.transform = 'translateY(10px)'; setTimeout(() => el.remove(), 300); }, 3600);
+  }
+  function validateField(field) {
+    const input = field.querySelector('input, select, textarea');
+    let ok = true;
+    if (input.type === 'checkbox') ok = input.checked;
+    else if (input.type === 'tel') ok = (input.value.replace(/[^\d]/g, '').length >= 7);
+    else ok = input.value.trim().length >= 2;
+    field.classList.toggle('field--invalid', !ok);
+    return ok;
+  }
+  function bindForm(formId, msgKey) {
+    const form = $('#' + formId); if (!form) return;
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      let valid = true;
+      $$('.field', form).forEach(f => { if (!validateField(f)) valid = false; });
+      const consent = form.querySelector('input[type=checkbox][required]');
+      if (consent && !consent.checked) valid = false;
+      if (!valid) { const bad = form.querySelector('.field--invalid input'); if (bad) bad.focus(); return; }
+      form.reset();
+      if (formId === 'tourModalForm') closeTour();
+      toast(t(msgKey));
+    });
+    $$('.field input', form).forEach(inp => {
+      inp.addEventListener('input', () => { const f = inp.closest('.field'); if (f.classList.contains('field--invalid')) validateField(f); });
+    });
+  }
+
+  /* ---------------- tour modal ---------------- */
+  function openTour() {
+    const m = $('#tourModal'); if (!m) return;
+    m.classList.add('open'); document.body.style.overflow = 'hidden';
+    const c = m.querySelector('.modal__close'); if (c) c.focus();
+  }
+  function closeTour() {
+    const m = $('#tourModal'); if (!m) return;
+    m.classList.remove('open'); document.body.style.overflow = '';
+  }
+  function bindTour() {
+    const m = $('#tourModal'); if (!m) return;
+    m.addEventListener('click', e => { if (e.target.closest('[data-tmclose]')) closeTour(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && m.classList.contains('open')) closeTour(); });
   }
 
   function renderGallery() {
@@ -110,6 +165,10 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     bindLang();
+    const yr = $('#year'); if (yr) yr.textContent = '2026';
+    bindTour();
+    bindForm('tourModalForm', 'toast.tour');
+    bindForm('footerForm', 'toast.footer');
     if (!o) {
       applyStatic();
       main.innerHTML = '<div class="op-notfound"><h1>Objekt nicht gefunden</h1><a class="btn btn--accent" href="index.html#katalog">' + t('obj.back') + '</a></div>';
@@ -117,6 +176,7 @@
     }
     main.appendChild($('#op-template').content.cloneNode(true));
     applyStatic();
+    const tb = $('#opTourBtn'); if (tb) tb.addEventListener('click', openTour);
 
     gal = { imgs: (o.gallery && o.gallery.length ? o.gallery : [o.img]), i: 0 };
     $('#opThumbs').innerHTML = gal.imgs.map((src, i) => '<img src="' + src + '" alt="' + o.name + ' — Foto ' + (i + 1) + '" data-gi="' + i + '" aria-current="' + (i === 0) + '">').join('');

@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Objekt — edelhaus</title>
 <meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<link rel="stylesheet" href="assets/css/styles.css?v=13">
+<link rel="stylesheet" href="assets/css/styles.css?v=14">
 </head>
 <body>
 
@@ -19,6 +20,10 @@
   <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="11" r="2.6"/></symbol>
   <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 2.6 15 0 18M12 3c-2.6 2.5-2.6 15 0 18"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5 9 4l1 4-2 1.5a11 11 0 0 0 4.5 4.5L14 16l4 1 .5 2.5a2 2 0 0 1-2 2.3A16.5 16.5 0 0 1 4.2 5.5a2 2 0 0 1 2.3-2Z"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 6"/></symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3Z"/><path d="M8.6 8.4c.2-.5.4-.5.7-.5h.5c.2 0 .4 0 .6.5l.7 1.6c.1.2 0 .4-.1.5l-.4.5c-.1.2-.2.3-.1.5.3.6.7 1.1 1.1 1.5.6.5 1.1.8 1.7 1 .2.1.4.1.5-.1l.5-.6c.2-.2.3-.2.5-.1l1.5.7c.2.1.4.2.4.4 0 .5-.2 1.1-.7 1.4-.4.3-1 .5-1.6.4-1.5-.2-3-1.1-4.2-2.3S8.4 12 8.1 10.5c-.1-.7 0-1.5.5-2.1Z"/></symbol>
+  <symbol id="i-telegram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 4.5 2.8 11.4c-.5.2-.5.9 0 1l4.6 1.4 1.8 5.3c.1.4.6.5.9.2l2.6-2.3 4.5 3.3c.4.3.9.1 1-.4l3.6-14.9c.1-.5-.4-.9-.9-.7Z"/><path d="m7.4 12.8 9.6-5.6-6.7 6.6"/></symbol>
 </defs></svg>
 
 <!-- ===== Header ===== -->
@@ -28,6 +33,9 @@
     <a href="index.html#katalog" class="op-back" style="margin-left:26px"><svg><use href="#i-chevron"/></svg><span data-i18n="obj.back">Zurück zum Katalog</span></a>
     <div class="header__spacer"></div>
     <div class="header__tools">
+      <a class="pill pill--round pill--wa" href="https://wa.me/4980012345" target="_blank" rel="noopener" aria-label="WhatsApp" style="border-color:var(--line)"><svg><use href="#i-whatsapp"/></svg></a>
+      <a class="pill pill--round pill--tg" href="https://t.me/edelhaus_bali" target="_blank" rel="noopener" aria-label="Telegram" style="border-color:var(--line)"><svg><use href="#i-telegram"/></svg></a>
+      <a class="pill pill--phone" href="tel:+4980012345" aria-label="Telefon" style="border-color:var(--line)"><svg><use href="#i-phone"/></svg><span>+49 800 123 45</span></a>
       <div class="lang" id="lang">
         <button class="pill lang__btn" id="langBtn" aria-haspopup="true" aria-expanded="false" style="border-color:var(--line)">
           <svg><use href="#i-globe"/></svg><span id="langCur">DE</span><svg class="lang__caret"><use href="#i-chevron"/></svg>
@@ -89,15 +97,102 @@
 
     <aside class="op-side">
       <div class="op-specs" data-f="specs"></div>
-      <a class="btn btn--accent" data-f="cta" href="index.html#kontakt" data-i18n="modal.cta"></a>
+      <button class="btn btn--accent" type="button" id="opTourBtn" data-i18n="modal.cta"></button>
       <a class="btn btn--light" href="tel:+4980012345" data-i18n="modal.call"></a>
+      <div class="op-side-social">
+        <a class="btn btn--sm btn--light" href="https://wa.me/4980012345" target="_blank" rel="noopener"><svg><use href="#i-whatsapp"/></svg>WhatsApp</a>
+        <a class="btn btn--sm btn--light" href="https://t.me/edelhaus_bali" target="_blank" rel="noopener"><svg><use href="#i-telegram"/></svg>Telegram</a>
+      </div>
       <p class="op-srcline" data-f="srcline"></p>
     </aside>
   </div>
 </template>
 
-<script src="assets/js/data.js?v=5"></script>
+<!-- ===== Online-Tour Modal ===== -->
+<div class="modal modal--tour" id="tourModal" role="dialog" aria-modal="true" aria-labelledby="tmTitle">
+  <div class="modal__overlay" data-tmclose></div>
+  <div class="modal__dialog modal__dialog--tour">
+    <button class="modal__close" data-tmclose aria-label="Schließen"><svg><use href="#i-close"/></svg></button>
+    <div class="tm-body">
+      <div class="tour__brand">edelhaus</div>
+      <h2 id="tmTitle" class="tm-title" data-i18n-html="tour.title">Buchen Sie eine <span class="mark">Online-Tour</span></h2>
+      <p class="tm-text" data-i18n="tour.text">Wir zeigen Ihnen die Objekte Ihrer Wahl und berechnen die Rendite.</p>
+      <form class="form" id="tourModalForm" novalidate>
+        <div class="field">
+          <label for="tm-name" class="sr-only" data-i18n="form.name">Name</label>
+          <input id="tm-name" name="name" type="text" autocomplete="name" required data-i18n-ph="form.name" placeholder="Name">
+          <span class="field__err" data-i18n="form.err.name">Bitte geben Sie Ihren Namen an.</span>
+        </div>
+        <div class="field">
+          <label for="tm-phone" class="sr-only" data-i18n="form.phone">Telefon</label>
+          <input id="tm-phone" name="phone" type="tel" autocomplete="tel" required data-i18n-ph="form.phone" placeholder="Telefon">
+          <span class="field__err" data-i18n="form.err.phone">Bitte geben Sie eine gültige Telefonnummer an.</span>
+        </div>
+        <button class="btn btn--block" type="submit" data-i18n="tour.submit">Termin buchen</button>
+      </form>
+      <div class="tm-contacts">
+        <a class="btn btn--sm btn--light" href="https://wa.me/4980012345" target="_blank" rel="noopener"><svg><use href="#i-whatsapp"/></svg>WhatsApp</a>
+        <a class="btn btn--sm btn--light" href="https://t.me/edelhaus_bali" target="_blank" rel="noopener"><svg><use href="#i-telegram"/></svg>Telegram</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <img class="footer__bg" src="assets/img/footer-bg.jpg" alt="">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__col">
+        <a href="index.html#top" class="footer__brand">edelhaus</a>
+        <nav class="footer__nav" aria-label="Footer">
+          <a href="index.html#katalog" data-i18n="nav.objects">Objekte</a>
+          <a href="index.html#vorteile" data-i18n="footer.advantages">Vorteile</a>
+          <a href="index.html#leistungen" data-i18n="nav.services">Leistungen</a>
+          <a href="index.html#tour" data-i18n="partners.short">Partner</a>
+        </nav>
+        <p class="footer__contact">
+          <a href="tel:+4980012345">+49 800 123 45</a><br>
+          <span data-i18n="footer.hours">Mo–Fr, 8:00–18:00</span><br>
+          <a href="impressum.html" data-i18n="footer.imprint">Impressum</a> · <a href="datenschutz.html" data-i18n="footer.privacy">Datenschutz</a>
+        </p>
+        <div class="footer__social">
+          <a class="btn btn--sm btn--on-dark btn--light" href="https://wa.me/4980012345" target="_blank" rel="noopener"><svg><use href="#i-whatsapp"/></svg>WhatsApp</a>
+          <a class="btn btn--sm btn--on-dark btn--light" href="https://t.me/edelhaus_bali" target="_blank" rel="noopener"><svg><use href="#i-telegram"/></svg>Telegram</a>
+        </div>
+      </div>
+      <div class="footer__form">
+        <h2 data-i18n="footer.formtitle">Anmeldung zur Online-Tour</h2>
+        <form class="form" id="footerForm" novalidate>
+          <div class="field">
+            <label for="ff-name" data-i18n="form.name">Name</label>
+            <input id="ff-name" name="name" type="text" required data-i18n-ph="form.name.ph" placeholder="Ihr Name">
+            <span class="field__err" data-i18n="form.err.name">Bitte geben Sie Ihren Namen an.</span>
+          </div>
+          <div class="field">
+            <label for="ff-phone" data-i18n="form.phone">Telefon</label>
+            <input id="ff-phone" name="phone" type="tel" required data-i18n-ph="form.phone.ph" placeholder="+49 …">
+            <span class="field__err" data-i18n="form.err.phone">Bitte geben Sie eine gültige Telefonnummer an.</span>
+          </div>
+          <label class="footer__consent">
+            <input type="checkbox" required id="ff-consent">
+            <span data-i18n="form.consent">Ich stimme der Datenschutzerklärung zu.</span>
+          </label>
+          <button class="btn btn--accent" type="submit" data-i18n="footer.submit">Anfrage senden</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> edelhaus</span>
+      <span><a href="impressum.html" data-i18n="footer.imprint">Impressum</a> · <a href="datenschutz.html" data-i18n="footer.privacy">Datenschutz</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast-wrap" id="toasts"></div>
+
+<script src="assets/js/data.js?v=6"></script>
 <script src="assets/js/descriptions.js?v=3"></script>
-<script src="assets/js/objekt.js?v=3"></script>
+<script src="assets/js/objekt.js?v=4"></script>
 </body>
 </html>

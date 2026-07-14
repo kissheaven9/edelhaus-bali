@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>edelhaus — Immobilien-Investment auf Bali mit deutscher Betreuung</title>
 <meta name="description" content="edelhaus — Premium-Villen und Apartments auf Bali mit garantiertem Management. Rendite bis 20 % p.a., deutschsprachige Betreuung von der Auswahl bis zum Eigentum.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<link rel="stylesheet" href="assets/css/styles.css?v=13">
+<link rel="stylesheet" href="assets/css/styles.css?v=14">
 </head>
 <body>
 
@@ -27,6 +28,8 @@
     <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 6"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="11" r="2.6"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3Z"/><path d="M8.6 8.4c.2-.5.4-.5.7-.5h.5c.2 0 .4 0 .6.5l.7 1.6c.1.2 0 .4-.1.5l-.4.5c-.1.2-.2.3-.1.5.3.6.7 1.1 1.1 1.5.6.5 1.1.8 1.7 1 .2.1.4.1.5-.1l.5-.6c.2-.2.3-.2.5-.1l1.5.7c.2.1.4.2.4.4 0 .5-.2 1.1-.7 1.4-.4.3-1 .5-1.6.4-1.5-.2-3-1.1-4.2-2.3S8.4 12 8.1 10.5c-.1-.7 0-1.5.5-2.1Z"/></symbol>
+    <symbol id="i-telegram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 4.5 2.8 11.4c-.5.2-.5.9 0 1l4.6 1.4 1.8 5.3c.1.4.6.5.9.2l2.6-2.3 4.5 3.3c.4.3.9.1 1-.4l3.6-14.9c.1-.5-.4-.9-.9-.7Z"/><path d="m7.4 12.8 9.6-5.6-6.7 6.6"/></symbol>
     <!-- vorteile -->
     <symbol id="ic-experience" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9.5 13.2 8 21l4-2.3L16 21l-1.5-7.8"/><path d="m12 6.6.9 1.8 2 .3-1.45 1.4.34 2-1.79-.95-1.79.95.34-2L9.1 8.7l2-.3Z"/></symbol>
     <symbol id="ic-expertise" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/><path d="M11 7.5 12.3 10l2.7.4-2 1.9.5 2.7L11 13.7 8.5 15l.5-2.7-2-1.9L9.7 10Z"/></symbol>
@@ -36,7 +39,7 @@
     <symbol id="ic-manage" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11 12 4l8 7"/><path d="M6 10v9h5v-5h2v5h5v-9"/><circle cx="12" cy="14" r="1"/></symbol>
     <symbol id="ic-individual" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.4"/><path d="M5.5 20a6.5 6.5 0 0 1 13 0"/><path d="m18.5 6.2.7 1.5 1.6.2-1.2 1.1.3 1.6-1.4-.8-1.4.8.3-1.6-1.2-1.1 1.6-.2Z"/></symbol>
     <symbol id="ic-support" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.4 8.6-1.7 5.1-5.1 1.7 1.7-5.1z"/><circle cx="12" cy="12" r=".7" fill="currentColor" stroke="none"/></symbol>
-    <symbol id="ic-legal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10"/><path d="M5 7h14M8 4.5 5 7m3-2.5L11 7"/><path d="m5 7-2 4.5a3 3 0 0 0 6 0L7 7"/><path d="m19 7-2 4.5a3 3 0 0 0 6 0L21 7"/></symbol>
+    <symbol id="ic-legal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5v14.5M8.5 20h7"/><path d="M4 7h16"/><path d="M6 7 3.4 12.2a2.6 2.6 0 0 0 5.2 0L6 7Z"/><path d="M18 7l-2.6 5.2a2.6 2.6 0 0 0 5.2 0L18 7Z"/><circle cx="12" cy="4.4" r="1.1"/></symbol>
   </defs>
 </svg>
 
@@ -50,9 +53,9 @@
     </nav>
     <div class="header__spacer"></div>
     <div class="header__tools">
-      <a class="pill pill--round" href="#" aria-label="Instagram">Inst</a>
-      <a class="pill pill--round" href="tel:+4980012345" aria-label="Telefon">Tel</a>
-      <a class="pill" href="#kontakt" data-i18n="nav.contact">Kontakt</a>
+      <a class="pill pill--round pill--wa" href="https://wa.me/4980012345" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-whatsapp"/></svg></a>
+      <a class="pill pill--round pill--tg" href="https://t.me/edelhaus_bali" target="_blank" rel="noopener" aria-label="Telegram"><svg><use href="#i-telegram"/></svg></a>
+      <a class="pill pill--phone" href="tel:+4980012345" aria-label="Telefon"><svg><use href="#i-phone"/></svg><span>+49 800 123 45</span></a>
       <div class="lang" id="lang">
         <button class="pill lang__btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
           <svg><use href="#i-globe"/></svg><span id="langCur">DE</span><svg class="lang__caret"><use href="#i-chevron"/></svg>
@@ -132,14 +135,34 @@
   <div class="container">
     <h2 class="h-sec reveal" data-i18n-html="catalog.title">Finden Sie Ihr ideales Objekt</h2>
     <p class="lead reveal" data-i18n="catalog.note" style="margin-top:10px">Echte, öffentlich gelistete Bali-Objekte. Angaben & Renditen laut Quelle (im Detail verlinkt).</p>
-    <div class="chips reveal" id="chips" role="group" aria-label="Filter">
-      <button class="chip" data-filter="all" aria-pressed="true" data-i18n="catalog.f.all">Alle</button>
-      <button class="chip" data-filter="apartment" aria-pressed="false" data-i18n="catalog.f.apartment">Apartments</button>
-      <button class="chip" data-filter="villa" aria-pressed="false" data-i18n="catalog.f.villa">Villen</button>
-      <button class="chip" data-filter="offplan" aria-pressed="false" data-i18n="catalog.f.offplan">Neubau</button>
-      <button class="chip" data-filter="commercial" aria-pressed="false" data-i18n="catalog.f.commercial">Gewerbe</button>
+    <div class="cat-toolbar reveal" id="catToolbar">
+      <div class="chips" id="chips" role="group" aria-label="Typ">
+        <button class="chip" data-filter="all" aria-pressed="false" data-i18n="catalog.f.all">Alle</button>
+        <button class="chip" data-filter="apartment" aria-pressed="false" data-i18n="catalog.f.apartment">Apartments</button>
+        <button class="chip" data-filter="villa" aria-pressed="true" data-i18n="catalog.f.villa">Villen</button>
+        <button class="chip" data-filter="offplan" aria-pressed="false" data-i18n="catalog.f.offplan">Neubau</button>
+        <button class="chip" data-filter="commercial" aria-pressed="false" data-i18n="catalog.f.commercial">Gewerbe</button>
+      </div>
+      <div class="cat-controls">
+        <label class="cat-select">
+          <span class="cat-select__lbl" data-i18n="cat.region">Region</span>
+          <select id="regionSel" aria-label="Region">
+            <option value="all" data-i18n="cat.region.all">Alle Regionen</option>
+          </select>
+        </label>
+        <label class="cat-select">
+          <span class="cat-select__lbl" data-i18n="cat.sort">Sortierung</span>
+          <select id="sortSel" aria-label="Sortierung">
+            <option value="default" data-i18n="cat.sort.default">Empfohlen</option>
+            <option value="price-asc" data-i18n="cat.sort.priceasc">Preis aufsteigend</option>
+            <option value="price-desc" data-i18n="cat.sort.pricedesc">Preis absteigend</option>
+            <option value="area-desc" data-i18n="cat.sort.areadesc">Größte Fläche</option>
+          </select>
+        </label>
+      </div>
     </div>
     <div class="catalog" id="catalog"></div>
+    <p class="cat-empty" id="catEmpty" hidden data-i18n="catalog.empty">Keine Objekte für diese Auswahl.</p>
   </div>
 </section>
 
@@ -310,7 +333,7 @@
     </div>
     <div class="footer__bottom">
       <span>© <span id="year"></span> edelhaus</span>
-      <span data-i18n="footer.demo">Portfolio-Demo · kein reales Angebot</span>
+      <span><a href="impressum.html" data-i18n="footer.imprint">Impressum</a> · <a href="datenschutz.html" data-i18n="footer.privacy">Datenschutz</a></span>
     </div>
   </div>
 </footer>
@@ -369,16 +392,23 @@
   <div class="drawer__overlay" data-drawer-close></div>
   <nav class="drawer__panel" aria-label="Mobile Navigation">
     <button class="drawer__close" data-drawer-close aria-label="Schließen">×</button>
+    <a href="#top" class="drawer__brand" data-drawer-close>edelhaus</a>
+    <div class="drawer__contact">
+      <a class="drawer__phone" href="tel:+4980012345"><svg><use href="#i-phone"/></svg>+49 800 123 45</a>
+      <div class="drawer__social">
+        <a class="btn btn--sm" href="https://wa.me/4980012345" target="_blank" rel="noopener"><svg><use href="#i-whatsapp"/></svg>WhatsApp</a>
+        <a class="btn btn--sm btn--light" href="https://t.me/edelhaus_bali" target="_blank" rel="noopener"><svg><use href="#i-telegram"/></svg>Telegram</a>
+      </div>
+    </div>
     <a href="#katalog" data-drawer-close data-i18n="nav.objects">Objekte</a>
     <a href="#vorteile" data-drawer-close data-i18n="nav.about">Über uns</a>
     <a href="#leistungen" data-drawer-close data-i18n="nav.services">Leistungen</a>
-    <a href="#kontakt" data-drawer-close data-i18n="nav.contact">Kontakt</a>
   </nav>
 </div>
 
 <div class="toast-wrap" id="toasts"></div>
 
-<script src="assets/js/data.js?v=5"></script>
-<script src="assets/js/app.js?v=10"></script>
+<script src="assets/js/data.js?v=6"></script>
+<script src="assets/js/app.js?v=11"></script>
 </body>
 </html>

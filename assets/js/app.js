@@ -19,7 +19,10 @@
      Yields are developer/market estimates as stated by the source. ---------------- */
   const G = 'assets/img/obj/';
   const OBJECTS = window.ED.OBJECTS, FEAT = window.ED.FEAT;
-  let currentFilter = 'all';
+  let currentFilter = 'villa';
+  let currentRegion = 'all';
+  let currentSort = 'default';
+  const regionOf = (o) => (o.loc || '').split('·')[0].trim();
 
   /* ---------------- helpers ---------------- */
   const $ = (s, r = document) => r.querySelector(s);
@@ -36,10 +39,26 @@
   }
 
   /* ---------------- catalog ---------------- */
+  function populateRegions() {
+    const sel = $('#regionSel'); if (!sel) return;
+    const regions = Array.from(new Set(OBJECTS.map(regionOf).filter(Boolean))).sort((a, b) => a.localeCompare(b, 'de'));
+    const first = sel.querySelector('option[value="all"]');
+    sel.innerHTML = '';
+    if (first) sel.appendChild(first);
+    regions.forEach(r => { const o = document.createElement('option'); o.value = r; o.textContent = r; sel.appendChild(o); });
+    sel.value = currentRegion;
+  }
+
   function renderCatalog() {
-    const box = $('#catalog');
-    const list = OBJECTS.filter(o => currentFilter === 'all' || o.type === currentFilter);
-    if (!list.length) { box.innerHTML = '<p class="lead">' + t('catalog.empty') + '</p>'; return; }
+    const box = $('#catalog'), empty = $('#catEmpty');
+    let list = OBJECTS.filter(o =>
+      (currentFilter === 'all' || o.type === currentFilter) &&
+      (currentRegion === 'all' || regionOf(o) === currentRegion));
+    if (currentSort === 'price-asc') list = list.slice().sort((a, b) => (a.price || 0) - (b.price || 0));
+    else if (currentSort === 'price-desc') list = list.slice().sort((a, b) => (b.price || 0) - (a.price || 0));
+    else if (currentSort === 'area-desc') list = list.slice().sort((a, b) => (b.area || 0) - (a.area || 0));
+    if (empty) empty.hidden = list.length > 0;
+    if (!list.length) { box.innerHTML = ''; return; }
     box.innerHTML = list.map(o => `
       <a class="pcard reveal is-in" href="objekt.html?id=${o.id}" target="_blank" rel="noopener" data-id="${o.id}">
         <div class="pcard__media">
@@ -68,6 +87,9 @@
       currentFilter = btn.dataset.filter;
       renderCatalog();
     });
+    const rs = $('#regionSel'), ss = $('#sortSel');
+    if (rs) rs.addEventListener('change', () => { currentRegion = rs.value; renderCatalog(); });
+    if (ss) ss.addEventListener('change', () => { currentSort = ss.value; renderCatalog(); });
   }
 
   /* ---------------- modal ---------------- */
@@ -254,6 +276,7 @@
     lang = LANGS.includes(saved) ? saved : 'de';
     $('#year').textContent = '2026';
     applyI18n();
+    populateRegions();
     renderCatalog();
     bindCatalog();
     bindModal();
