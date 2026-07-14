@@ -68,7 +68,7 @@
 
     // specs
     F('specs').innerHTML = [
-      ['spec.area', t('spec.from') + ' ' + o.area + ' m²'],
+      ['spec.area', o.area ? t('spec.from') + ' ' + o.area + ' m²' : '—'],
       ['spec.beds', o.beds],
       ['spec.price', t('spec.from') + ' ' + fmtEUR(o.price) + ' €'],
       ['spec.yield', o.yieldTxt ? '<span class="mark">' + o.yieldTxt + '</span>' : t('spec.onreq')],

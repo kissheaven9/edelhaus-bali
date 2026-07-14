@@ -49,7 +49,7 @@
           <div class="pcard__name">${o.name}</div>
           <div class="pcard__loc"><svg width="14" height="14"><use href="#i-pin"/></svg>${o.loc}</div>
           <div class="pcard__specs">
-            <div><div class="spec__k">${t('spec.area')}</div><div class="spec__v">${t('spec.from')} ${o.area} m²</div></div>
+            <div><div class="spec__k">${t('spec.area')}</div><div class="spec__v">${o.area ? t('spec.from') + ' ' + o.area + ' m²' : '—'}</div></div>
             <div><div class="spec__k">${t('spec.price')}</div><div class="spec__v">${t('spec.from')} ${fmtEUR(o.price)} €</div></div>
             <div><div class="spec__k">${t('spec.yield')}</div><div class="spec__v">${o.yieldTxt ? '<span class="mark">' + o.yieldTxt + '</span>' : '<span style="color:var(--ink-3);font-weight:500">' + t('spec.onreq') + '</span>'}</div></div>
             <div><div class="spec__k">${t('spec.dev')}</div><div class="spec__v" style="font-weight:500;font-size:.8rem">${o.dev}</div></div>
