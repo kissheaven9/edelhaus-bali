@@ -10,7 +10,8 @@
   const I18N = window.ED.I18N;
   const LANGS = ['de', 'en', 'ru', 'uk'];
   let lang = 'de';
-  const t = (k) => (I18N[lang] && I18N[lang][k]) || (I18N.de[k] || k);
+  const T = window.EDtypo || (s => s);
+  const t = (k) => T((I18N[lang] && I18N[lang][k]) || (I18N.de[k] || k));
 
   /* ---------------- Catalog data — REAL, publicly-listed Bali objects.
      Parameters (developer, district, area, price, tenure, yield) taken from the

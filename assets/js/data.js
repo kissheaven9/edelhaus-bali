@@ -300,3 +300,30 @@
   };
 
   window.ED = { I18N: I18N, OBJECTS: OBJECTS, FEAT: FEAT };
+
+/* Typography: bind short function words / prepositions to the next word with a
+   non-breaking space so they never hang at a line end (all languages). */
+window.EDtypo = (function () {
+  var FUNC = { 'und':1,'mit':1,'auf':1,'von':1,'bis':1,'für':1,'der':1,'die':1,'das':1,'den':1,'aus':1,'vom':1,'zum':1,'zur':1,'ein':1,'als':1,'uns':1,
+    'and':1,'the':1,'for':1,'are':1,'our':1,'you':1,
+    'для':1,'при':1,'про':1,'над':1,'под':1,'без':1,'или':1,'что':1,'как':1,'где':1,'чем':1,'так':1,
+    'під':1,'або':1,'що':1,'як':1,'чи':1,'чим':1,'так':1 };
+  function isShort(w) { w = w.toLowerCase(); return w.length > 0 && (w.length <= 2 || FUNC[w] === 1); }
+  function tx(t) {
+    if (t.indexOf(' ') < 0) return t;
+    var toks = t.split(' '), out = '';
+    for (var i = 0; i < toks.length; i++) {
+      out += toks[i];
+      if (i < toks.length - 1) {
+        var w = toks[i].replace(/[^A-Za-zÀ-ÿА-Яа-яЁёІіЇїЄєҐґ'’-]/g, '');
+        out += (isShort(w) ? ' ' : ' ');
+      }
+    }
+    return out;
+  }
+  return function (s) {
+    if (!s || typeof s !== 'string' || s.indexOf(' ') < 0) return s;
+    if (s.indexOf('<') < 0) return tx(s);
+    return s.split(/(<[^>]+>)/).map(function (p) { return p.charAt(0) === '<' ? p : tx(p); }).join('');
+  };
+})();

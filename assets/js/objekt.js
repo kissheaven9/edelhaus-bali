@@ -15,7 +15,8 @@
 
   let lang = 'de';
   try { lang = LANGS.includes(localStorage.getItem('edelhaus_lang')) ? localStorage.getItem('edelhaus_lang') : 'de'; } catch (e) {}
-  const t = (k) => (I18N[lang] && I18N[lang][k]) || (I18N.de && I18N.de[k]) || k;
+  const T = window.EDtypo || (s => s);
+  const t = (k) => T((I18N[lang] && I18N[lang][k]) || (I18N.de && I18N.de[k]) || k);
 
   const id = new URLSearchParams(location.search).get('id');
   const o = OBJECTS.find(x => x.id === id);
@@ -61,7 +62,7 @@
 
     // description (full, mirrors developer info)
     const dtext = (FULL[o.id] && (FULL[o.id][lang] || FULL[o.id].de)) || '';
-    F('desc').innerHTML = dtext.split(/\n+/).map(p => '<p>' + p + '</p>').join('');
+    F('desc').innerHTML = dtext.split(/\n+/).map(p => '<p>' + T(p) + '</p>').join('');
 
     // features
     F('feats').innerHTML = (o.feat || []).map(k => '<li>' + ((FEAT[k] && (FEAT[k][lang] || FEAT[k].de)) || k) + '</li>').join('');

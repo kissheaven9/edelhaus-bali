@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<link rel="stylesheet" href="assets/css/styles.css?v=10">
+<link rel="stylesheet" href="assets/css/styles.css?v=11">
 </head>
 <body>
 
@@ -167,13 +167,13 @@
           <p data-i18n="tour.text">Wir zeigen Ihnen die Objekte Ihrer Wahl und berechnen die Rendite.</p>
           <form class="form" id="tourForm" novalidate>
             <div class="field">
-              <label for="tf-name" data-i18n="form.name">Name</label>
-              <input id="tf-name" name="name" type="text" autocomplete="name" required data-i18n-ph="form.name.ph" placeholder="Ihr Name">
+              <label for="tf-name" class="sr-only" data-i18n="form.name">Name</label>
+              <input id="tf-name" name="name" type="text" autocomplete="name" required data-i18n-ph="form.name" placeholder="Name">
               <span class="field__err" data-i18n="form.err.name">Bitte geben Sie Ihren Namen an.</span>
             </div>
             <div class="field">
-              <label for="tf-phone" data-i18n="form.phone">Telefon</label>
-              <input id="tf-phone" name="phone" type="tel" autocomplete="tel" required data-i18n-ph="form.phone.ph" placeholder="+49 …">
+              <label for="tf-phone" class="sr-only" data-i18n="form.phone">Telefon</label>
+              <input id="tf-phone" name="phone" type="tel" autocomplete="tel" required data-i18n-ph="form.phone" placeholder="Telefon">
               <span class="field__err" data-i18n="form.err.phone">Bitte geben Sie eine gültige Telefonnummer an.</span>
             </div>
             <div class="form__row">
@@ -378,7 +378,7 @@
 
 <div class="toast-wrap" id="toasts"></div>
 
-<script src="assets/js/data.js?v=3"></script>
-<script src="assets/js/app.js?v=9"></script>
+<script src="assets/js/data.js?v=4"></script>
+<script src="assets/js/app.js?v=10"></script>
 </body>
 </html>
