@@ -18,7 +18,14 @@
       'catalog.title': 'Finden Sie Ihr <span class="mark">ideales Objekt</span>', 'catalog.note': 'Echte, öffentlich gelistete Bali-Objekte. Angaben & Renditen laut Quelle (im Detail verlinkt).',
       'catalog.f.all': 'Alle', 'catalog.f.apartment': 'Apartments', 'catalog.f.villa': 'Villen', 'catalog.f.offplan': 'Neubau', 'catalog.f.commercial': 'Gewerbe',
       'catalog.more': 'Mehr erfahren', 'catalog.empty': 'Keine Objekte für diese Auswahl.',
-      'cat.region': 'Region', 'cat.region.all': 'Alle Regionen', 'cat.sort': 'Sortierung', 'cat.sort.default': 'Empfohlen', 'cat.sort.priceasc': 'Preis aufsteigend', 'cat.sort.pricedesc': 'Preis absteigend', 'cat.sort.areadesc': 'Größte Fläche',
+      'cat.region': 'Region', 'cat.region.all': 'Alle Regionen', 'cat.sort': 'Sortierung', 'cat.sort.default': 'Empfohlen', 'cat.sort.priceasc': 'Preis aufsteigend', 'cat.sort.pricedesc': 'Preis absteigend', 'cat.sort.areadesc': 'Fläche absteigend', 'cat.sort.areaasc': 'Fläche aufsteigend',
+      'quiz.title': 'Wir finden das Objekt <span class="mark">für Ihre Situation</span>', 'quiz.sub': 'Vier Fragen — und Sie sehen die passenden Objekte aus unserem Katalog. Ohne Anmeldung, in 30 Sekunden.', 'quiz.back': 'Zurück',
+      'einw.title': 'Woran Investoren <span class="mark">zweifeln</span> — und wie wir es lösen',
+      'einw.q1': '„Ich kann kein Grundstück in Indonesien besitzen.“', 'einw.a1': 'Richtig — als Ausländer kaufen Sie über Leasehold (Hak Sewa) oder eine PT PMA. Wir prüfen jeden Titel mit unabhängigen Notaren und legen die Struktur vorab schriftlich offen.',
+      'einw.q2': '„Ich bin 12.000 km entfernt — wer kümmert sich?“', 'einw.a2': 'Wir übernehmen Vermietung, Wartung und Reporting. Sie erhalten monatliche Abrechnungen auf Deutsch und einen festen Ansprechpartner in Ihrer Zeitzone.',
+      'einw.q3': '„Sind die versprochenen Renditen realistisch?“', 'einw.a3': 'Wir rechnen mit echten Auslastungszahlen, nicht mit Bestcase-Folien. Zu jedem Objekt nennen wir die Quelle der Angaben — und sagen auch, wenn eine Rendite zu optimistisch ist.',
+      'einw.q4': '„Ich sehe nur ausgewählte Angebote eines Maklers.“', 'einw.a4': 'Bei uns nicht: unser Katalog bündelt Objekte vieler Bauträger und Agenturen auf Bali — vom Studio bis zum Hotel. Wir zeigen auch, was nicht zu Ihnen passt.',
+      'usp.title': 'Der vollständigste Bali-Katalog', 'usp.text': 'Villen, Apartments, Neubauten und Gewerbe von mehreren Bauträgern und Agenturen — an einem Ort, mit Quellenangabe zu jedem Objekt.', 'usp.cta': 'Katalog ansehen',
       'spec.from': 'ab', 'spec.upto': 'bis', 'spec.area': 'Fläche', 'spec.price': 'Preis', 'spec.yield': 'Rendite', 'spec.tenure': 'Besitzform', 'spec.dev': 'Bauträger', 'spec.completion': 'Fertigstellung', 'spec.onreq': 'auf Anfrage', 'spec.beds': 'Schlafzimmer', 'modal.about': 'Objektbeschreibung', 'modal.location': 'Lage', 'modal.mapopen': 'In Google Maps öffnen', 'obj.back': 'Zurück zum Katalog', 'obj.features': 'Ausstattung',
       'tour.badge': 'deutsche Betreuung', 'tour.answer': 'Antworten', 'tour.title': 'Buchen Sie eine <span class="mark">Online-Tour</span>',
       'tour.text': 'Wir zeigen Ihnen die Objekte Ihrer Wahl und berechnen die Rendite.', 'tour.submit': 'Termin buchen',
@@ -58,7 +65,14 @@
       'catalog.title': 'Find your <span class="mark">ideal property</span>', 'catalog.note': 'Real, publicly listed Bali properties. Figures & yields per source (linked in each detail).',
       'catalog.f.all': 'All', 'catalog.f.apartment': 'Apartments', 'catalog.f.villa': 'Villas', 'catalog.f.offplan': 'Off-plan', 'catalog.f.commercial': 'Commercial',
       'catalog.more': 'Learn more', 'catalog.empty': 'No properties for this selection.',
-      'cat.region': 'Region', 'cat.region.all': 'All regions', 'cat.sort': 'Sort by', 'cat.sort.default': 'Recommended', 'cat.sort.priceasc': 'Price: low to high', 'cat.sort.pricedesc': 'Price: high to low', 'cat.sort.areadesc': 'Largest area',
+      'cat.region': 'Region', 'cat.region.all': 'All regions', 'cat.sort': 'Sort by', 'cat.sort.default': 'Recommended', 'cat.sort.priceasc': 'Price: low to high', 'cat.sort.pricedesc': 'Price: high to low', 'cat.sort.areadesc': 'Area: large to small', 'cat.sort.areaasc': 'Area: small to large',
+      'quiz.title': 'We find the property <span class="mark">for your situation</span>', 'quiz.sub': 'Four questions — and you see the matching properties from our catalog. No sign-up, 30 seconds.', 'quiz.back': 'Back',
+      'einw.title': 'What investors <span class="mark">worry about</span> — and how we solve it',
+      'einw.q1': '“I cannot own land in Indonesia.”', 'einw.a1': 'Correct — as a foreigner you buy via leasehold (Hak Sewa) or a PT PMA. We verify every title with independent notaries and disclose the structure in writing upfront.',
+      'einw.q2': '“I am 12,000 km away — who takes care of it?”', 'einw.a2': 'We handle rental, maintenance and reporting. You get monthly statements and a dedicated contact person in your time zone.',
+      'einw.q3': '“Are the promised yields realistic?”', 'einw.a3': 'We calculate with real occupancy figures, not best-case slides. For every property we name the source of the data — and we say so when a yield looks too optimistic.',
+      'einw.q4': '“I only see one agent’s hand-picked listings.”', 'einw.a4': 'Not here: our catalog bundles properties from many developers and agencies across Bali — from studios to hotels. We also show you what does not fit you.',
+      'usp.title': 'The most complete Bali catalog', 'usp.text': 'Villas, apartments, off-plan and commercial from multiple developers and agencies — in one place, with the source stated for every property.', 'usp.cta': 'View the catalog',
       'spec.from': 'from', 'spec.upto': 'up to', 'spec.area': 'Area', 'spec.price': 'Price', 'spec.yield': 'Yield', 'spec.tenure': 'Tenure', 'spec.dev': 'Developer', 'spec.completion': 'Completion', 'spec.onreq': 'on request', 'spec.beds': 'Bedrooms', 'modal.about': 'About this property', 'modal.location': 'Location', 'modal.mapopen': 'Open in Google Maps', 'obj.back': 'Back to catalog', 'obj.features': 'Features',
       'tour.badge': 'German-speaking support', 'tour.answer': 'Answer', 'tour.title': 'Book an <span class="mark">online tour</span>',
       'tour.text': 'We show you the properties of your choice and calculate the yield.', 'tour.submit': 'Book a slot',
@@ -98,7 +112,14 @@
       'catalog.title': 'Подберите свой <span class="mark">идеальный объект</span>', 'catalog.note': 'Реальные объекты Бали из открытых листингов. Данные и доходность — по источнику (ссылка в деталях).',
       'catalog.f.all': 'Все', 'catalog.f.apartment': 'Апартаменты', 'catalog.f.villa': 'Виллы', 'catalog.f.offplan': 'Новостройки', 'catalog.f.commercial': 'Коммерция',
       'catalog.more': 'Узнать больше', 'catalog.empty': 'Нет объектов по этому запросу.',
-      'cat.region': 'Регион', 'cat.region.all': 'Все регионы', 'cat.sort': 'Сортировка', 'cat.sort.default': 'Рекомендуемые', 'cat.sort.priceasc': 'Цена по возрастанию', 'cat.sort.pricedesc': 'Цена по убыванию', 'cat.sort.areadesc': 'Наибольшая площадь',
+      'cat.region': 'Регион', 'cat.region.all': 'Все регионы', 'cat.sort': 'Сортировка', 'cat.sort.default': 'Рекомендуемые', 'cat.sort.priceasc': 'Цена по возрастанию', 'cat.sort.pricedesc': 'Цена по убыванию', 'cat.sort.areadesc': 'Площадь по убыванию', 'cat.sort.areaasc': 'Площадь по возрастанию',
+      'quiz.title': 'Подберём объект <span class="mark">под вашу ситуацию</span>', 'quiz.sub': 'Четыре вопроса — и вы увидите подходящие объекты из нашего каталога. Без регистрации, за 30 секунд.', 'quiz.back': 'Назад',
+      'einw.title': 'В чём <span class="mark">сомневаются</span> инвесторы — и как мы это решаем',
+      'einw.q1': '«Иностранец не может владеть землёй в Индонезии».', 'einw.a1': 'Верно — иностранец покупает через лизхолд (Hak Sewa) или компанию PT PMA. Мы проверяем каждый титул с независимыми нотариусами и заранее письменно раскрываем структуру сделки.',
+      'einw.q2': '«Я в 12 000 км — кто будет всем заниматься?»', 'einw.a2': 'Мы берём на себя аренду, обслуживание и отчётность. Вы получаете ежемесячные отчёты и персонального менеджера в вашем часовом поясе.',
+      'einw.q3': '«Обещанная доходность реальна?»', 'einw.a3': 'Мы считаем по реальной загрузке, а не по красивым слайдам. У каждого объекта указан источник данных — и мы прямо говорим, если доходность выглядит завышенной.',
+      'einw.q4': '«Мне покажут только то, что выгодно агенту».', 'einw.a4': 'У нас не так: каталог собирает объекты многих застройщиков и агентств Бали — от студии до отеля. Мы честно скажем и о том, что вам не подходит.',
+      'usp.title': 'Самый полный каталог Бали', 'usp.text': 'Виллы, апартаменты, новостройки и коммерция от разных застройщиков и агентств — в одном месте, со ссылкой на источник по каждому объекту.', 'usp.cta': 'Смотреть каталог',
       'spec.from': 'от', 'spec.upto': 'до', 'spec.area': 'Площадь', 'spec.price': 'Стоимость', 'spec.yield': 'Доходность', 'spec.tenure': 'Право', 'spec.dev': 'Застройщик', 'spec.completion': 'Сдача', 'spec.onreq': 'по запросу', 'spec.beds': 'Спальни', 'modal.about': 'Об объекте', 'modal.location': 'Расположение', 'modal.mapopen': 'Открыть в Google Maps', 'obj.back': 'Назад к каталогу', 'obj.features': 'Оснащение',
       'tour.badge': 'немецкая поддержка', 'tour.answer': 'Ответить', 'tour.title': 'Запишитесь на <span class="mark">онлайн-тур</span>',
       'tour.text': 'Мы покажем заинтересовавшие вас объекты и рассчитаем доходность.', 'tour.submit': 'Записаться',
@@ -138,7 +159,14 @@
       'catalog.title': 'Підберіть свій <span class="mark">ідеальний обʼєкт</span>', 'catalog.note': 'Реальні обʼєкти Балі з відкритих лістингів. Дані та дохідність — за джерелом (посилання в деталях).',
       'catalog.f.all': 'Усі', 'catalog.f.apartment': 'Апартаменти', 'catalog.f.villa': 'Вілли', 'catalog.f.offplan': 'Новобудови', 'catalog.f.commercial': 'Комерція',
       'catalog.more': 'Дізнатися більше', 'catalog.empty': 'Немає обʼєктів за цим запитом.',
-      'cat.region': 'Регіон', 'cat.region.all': 'Усі регіони', 'cat.sort': 'Сортування', 'cat.sort.default': 'Рекомендовані', 'cat.sort.priceasc': 'Ціна за зростанням', 'cat.sort.pricedesc': 'Ціна за спаданням', 'cat.sort.areadesc': 'Найбільша площа',
+      'cat.region': 'Регіон', 'cat.region.all': 'Усі регіони', 'cat.sort': 'Сортування', 'cat.sort.default': 'Рекомендовані', 'cat.sort.priceasc': 'Ціна за зростанням', 'cat.sort.pricedesc': 'Ціна за спаданням', 'cat.sort.areadesc': 'Площа за спаданням', 'cat.sort.areaasc': 'Площа за зростанням',
+      'quiz.title': 'Підберемо обʼєкт <span class="mark">під вашу ситуацію</span>', 'quiz.sub': 'Чотири питання — і ви побачите відповідні обʼєкти з нашого каталогу. Без реєстрації, за 30 секунд.', 'quiz.back': 'Назад',
+      'einw.title': 'У чому <span class="mark">сумніваються</span> інвестори — і як ми це вирішуємо',
+      'einw.q1': '«Іноземець не може володіти землею в Індонезії».', 'einw.a1': 'Саме так — іноземець купує через лізгольд (Hak Sewa) або компанію PT PMA. Ми перевіряємо кожен титул із незалежними нотаріусами й наперед письмово розкриваємо структуру угоди.',
+      'einw.q2': '«Я за 12 000 км — хто всім займатиметься?»', 'einw.a2': 'Ми беремо на себе оренду, обслуговування та звітність. Ви отримуєте щомісячні звіти й персонального менеджера у вашому часовому поясі.',
+      'einw.q3': '«Чи реальна обіцяна дохідність?»', 'einw.a3': 'Ми рахуємо за реальним завантаженням, а не за гарними слайдами. У кожного обʼєкта вказано джерело даних — і ми прямо кажемо, якщо дохідність виглядає завищеною.',
+      'einw.q4': '«Мені покажуть лише те, що вигідно агенту».', 'einw.a4': 'У нас не так: каталог збирає обʼєкти багатьох забудовників і агенцій Балі — від студії до готелю. Ми чесно скажемо й про те, що вам не підходить.',
+      'usp.title': 'Найповніший каталог Балі', 'usp.text': 'Вілли, апартаменти, новобудови та комерція від різних забудовників і агенцій — в одному місці, з посиланням на джерело по кожному обʼєкту.', 'usp.cta': 'Дивитися каталог',
       'spec.from': 'від', 'spec.upto': 'до', 'spec.area': 'Площа', 'spec.price': 'Вартість', 'spec.yield': 'Дохідність', 'spec.tenure': 'Право', 'spec.dev': 'Забудовник', 'spec.completion': 'Здача', 'spec.onreq': 'за запитом', 'spec.beds': 'Спальні', 'modal.about': 'Про обʼєкт', 'modal.location': 'Розташування', 'modal.mapopen': 'Відкрити в Google Maps', 'obj.back': 'Назад до каталогу', 'obj.features': 'Оснащення',
       'tour.badge': 'німецька підтримка', 'tour.answer': 'Відповісти', 'tour.title': 'Запишіться на <span class="mark">онлайн-тур</span>',
       'tour.text': 'Ми покажемо обрані вами обʼєкти та розрахуємо дохідність.', 'tour.submit': 'Записатися',
@@ -443,7 +471,52 @@
     hotel: { de: 'Hotelbetrieb', en: 'Hotel operation', ru: 'Гостиница', uk: 'Готель' }
   };
 
-  window.ED = { I18N: I18N, OBJECTS: OBJECTS, FEAT: FEAT };
+  /* ---------------- Quiz: "Objekt zu Ihrer Situation finden" (4 Sprachen) ---------------- */
+  const QUIZ = {
+    ui: {
+      step:      { de: 'Frage', en: 'Question', ru: 'Вопрос', uk: 'Питання' },
+      of:        { de: 'von', en: 'of', ru: 'из', uk: 'з' },
+      back:      { de: 'Zurück', en: 'Back', ru: 'Назад', uk: 'Назад' },
+      restart:   { de: 'Neu starten', en: 'Start over', ru: 'Пройти заново', uk: 'Пройти заново' },
+      resTitle:  { de: 'Ihre passenden Objekte', en: 'Your matching properties', ru: 'Подходящие объекты', uk: 'Відповідні обʼєкти' },
+      found:     { de: 'Treffer im Katalog', en: 'matches in the catalog', ru: 'совпадений в каталоге', uk: 'збігів у каталозі' },
+      none:      { de: 'Keine exakte Übereinstimmung — aber wir finden das passende Objekt für Sie. Sprechen Sie uns an.', en: 'No exact match — but we will find the right property for you. Get in touch.', ru: 'Точных совпадений нет — но мы подберём объект под вас. Напишите нам.', uk: 'Точних збігів немає — але ми підберемо обʼєкт для вас. Напишіть нам.' },
+      showAll:   { de: 'Alle Treffer im Katalog ansehen', en: 'See all matches in the catalog', ru: 'Показать все совпадения в каталоге', uk: 'Показати всі збіги в каталозі' },
+      book:      { de: 'Online-Tour buchen', en: 'Book an online tour', ru: 'Записаться на онлайн-тур', uk: 'Записатися на онлайн-тур' }
+    },
+    questions: [
+      { key: 'goal',
+        q: { de: 'Was ist Ihr Ziel?', en: 'What is your goal?', ru: 'Какая у вас цель?', uk: 'Яка у вас мета?' },
+        opts: [
+          { v: 'invest', l: { de: 'Kapitalanlage & Rendite', en: 'Investment & yield', ru: 'Инвестиции и доходность', uk: 'Інвестиції та дохідність' } },
+          { v: 'own',    l: { de: 'Eigennutzung', en: 'Own use', ru: 'Для себя', uk: 'Для себе' } },
+          { v: 'both',   l: { de: 'Beides', en: 'Both', ru: 'И то, и другое', uk: 'І те, і інше' } }
+        ] },
+      { key: 'budget',
+        q: { de: 'Ihr Budget?', en: 'Your budget?', ru: 'Ваш бюджет?', uk: 'Ваш бюджет?' },
+        opts: [
+          { v: '0-150',   l: { de: 'bis 150.000 €', en: 'up to €150,000', ru: 'до 150 000 €', uk: 'до 150 000 €' } },
+          { v: '150-300', l: { de: '150.000 – 300.000 €', en: '€150,000 – €300,000', ru: '150 000 – 300 000 €', uk: '150 000 – 300 000 €' } },
+          { v: '300-600', l: { de: '300.000 – 600.000 €', en: '€300,000 – €600,000', ru: '300 000 – 600 000 €', uk: '300 000 – 600 000 €' } },
+          { v: '600+',    l: { de: 'ab 600.000 €', en: 'from €600,000', ru: 'от 600 000 €', uk: 'від 600 000 €' } }
+        ] },
+      { key: 'type',
+        q: { de: 'Welcher Objekttyp?', en: 'Which property type?', ru: 'Какой тип объекта?', uk: 'Який тип обʼєкта?' },
+        opts: [
+          { v: 'apartment',  l: { de: 'Apartment', en: 'Apartment', ru: 'Апартаменты', uk: 'Апартаменти' } },
+          { v: 'villa',      l: { de: 'Villa', en: 'Villa', ru: 'Вилла', uk: 'Вілла' } },
+          { v: 'offplan',    l: { de: 'Neubau', en: 'Off-plan', ru: 'Новостройка', uk: 'Новобудова' } },
+          { v: 'commercial', l: { de: 'Gewerbe / Hotel', en: 'Commercial / hotel', ru: 'Коммерция / отель', uk: 'Комерція / готель' } },
+          { v: 'all',        l: { de: 'Egal — zeigen Sie alles', en: 'Any — show me everything', ru: 'Не важно — показать всё', uk: 'Не важливо — показати все' } }
+        ] },
+      { key: 'region',
+        q: { de: 'Bevorzugte Region?', en: 'Preferred region?', ru: 'Предпочитаемый регион?', uk: 'Бажаний регіон?' },
+        opts: [] /* dynamisch aus OBJECTS befüllt */,
+        anyLabel: { de: 'Egal — ganz Bali', en: 'Any — all of Bali', ru: 'Не важно — вся Бали', uk: 'Не важливо — уся Балі' } }
+    ]
+  };
+
+  window.ED = { I18N: I18N, OBJECTS: OBJECTS, FEAT: FEAT, QUIZ: QUIZ };
 
 /* Typography: bind short function words / prepositions to the next word with a
    non-breaking space so they never hang at a line end (all languages). */

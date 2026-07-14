@@ -41,7 +41,10 @@
   /* ---------------- catalog ---------------- */
   function populateRegions() {
     const sel = $('#regionSel'); if (!sel) return;
-    const regions = Array.from(new Set(OBJECTS.map(regionOf).filter(Boolean))).sort((a, b) => a.localeCompare(b, 'de'));
+    // only regions that actually have objects of the current type
+    const pool = OBJECTS.filter(o => currentFilter === 'all' || o.type === currentFilter);
+    const regions = Array.from(new Set(pool.map(regionOf).filter(Boolean))).sort((a, b) => a.localeCompare(b, 'de'));
+    if (currentRegion !== 'all' && regions.indexOf(currentRegion) < 0) currentRegion = 'all';
     const first = sel.querySelector('option[value="all"]');
     sel.innerHTML = '';
     if (first) sel.appendChild(first);
@@ -57,6 +60,7 @@
     if (currentSort === 'price-asc') list = list.slice().sort((a, b) => (a.price || 0) - (b.price || 0));
     else if (currentSort === 'price-desc') list = list.slice().sort((a, b) => (b.price || 0) - (a.price || 0));
     else if (currentSort === 'area-desc') list = list.slice().sort((a, b) => (b.area || 0) - (a.area || 0));
+    else if (currentSort === 'area-asc') list = list.slice().sort((a, b) => (a.area || 0) - (b.area || 0));
     if (empty) empty.hidden = list.length > 0;
     if (!list.length) { box.innerHTML = ''; return; }
     box.innerHTML = list.map(o => `
@@ -85,6 +89,7 @@
       $$('#chips .chip').forEach(c => c.setAttribute('aria-pressed', 'false'));
       btn.setAttribute('aria-pressed', 'true');
       currentFilter = btn.dataset.filter;
+      populateRegions();   // regions depend on the selected type
       renderCatalog();
     });
     const rs = $('#regionSel'), ss = $('#sortSel');
@@ -193,6 +198,106 @@
     });
   }
 
+  /* ---------------- quiz: find the right property ---------------- */
+  const QUIZ = (window.ED && window.ED.QUIZ) || null;
+  const BUDGET = { '0-150': [0, 150000], '150-300': [150000, 300000], '300-600': [300000, 600000], '600+': [600000, Infinity] };
+  let qi = 0, qAns = {};
+  const L = (o) => (o && (o[lang] || o.de)) || '';
+
+  function quizRegions() {
+    const counts = {};
+    OBJECTS.forEach(o => { const r = regionOf(o); if (r) counts[r] = (counts[r] || 0) + 1; });
+    return Object.keys(counts).sort((a, b) => counts[b] - counts[a]).slice(0, 5);
+  }
+  function quizOptsFor(q) {
+    if (q.key !== 'region') return q.opts;
+    return quizRegions().map(r => ({ v: r, l: { de: r, en: r, ru: r, uk: r } }))
+      .concat([{ v: 'all', l: q.anyLabel }]);
+  }
+  function quizMatches() {
+    const b = BUDGET[qAns.budget] || [0, Infinity];
+    let list = OBJECTS.filter(o =>
+      (o.price || 0) >= b[0] && (o.price || 0) < b[1] &&
+      (!qAns.type || qAns.type === 'all' || o.type === qAns.type) &&
+      (!qAns.region || qAns.region === 'all' || regionOf(o) === qAns.region));
+    if (qAns.goal === 'invest') list = list.slice().sort((a, b2) => (b2.yieldTxt ? 1 : 0) - (a.yieldTxt ? 1 : 0));
+    return list;
+  }
+  function renderQuiz() {
+    if (!QUIZ || !$('#quizBox')) return;
+    const total = QUIZ.questions.length;
+    $('#quizResult').hidden = true;
+    $('#quizOpts').hidden = false; $('#quizQ').hidden = false; $('#quizStep').hidden = false;
+    $('#quizBack').style.display = qi > 0 ? '' : 'none';
+    $('#quizBar').style.width = Math.round((qi / total) * 100) + '%';
+    const q = QUIZ.questions[qi];
+    $('#quizStep').textContent = L(QUIZ.ui.step) + ' ' + (qi + 1) + ' ' + L(QUIZ.ui.of) + ' ' + total;
+    $('#quizQ').textContent = T(L(q.q));
+    $('#quizOpts').innerHTML = quizOptsFor(q).map(o =>
+      '<button class="quiz__opt" type="button" data-v="' + o.v + '">' + T(L(o.l)) + '</button>').join('');
+  }
+  function renderQuizResult() {
+    const list = quizMatches();
+    $('#quizOpts').hidden = true; $('#quizQ').hidden = true; $('#quizStep').hidden = true;
+    $('#quizBack').style.display = '';
+    $('#quizBar').style.width = '100%';
+    const res = $('#quizResult'); res.hidden = false;
+    const cards = list.slice(0, 3).map(o => `
+      <a class="pcard" href="objekt.html?id=${o.id}" target="_blank" rel="noopener">
+        <div class="pcard__media"><img src="${o.img}" alt="${o.name}" style="object-position:${o.pos}">
+          <span class="pcard__badge">${t('catalog.f.' + o.type)}</span></div>
+        <div class="pcard__body">
+          <div class="pcard__name">${o.name}</div>
+          <div class="pcard__loc"><svg width="14" height="14"><use href="#i-pin"/></svg>${o.loc}</div>
+          <div class="pcard__specs">
+            <div><div class="spec__k">${t('spec.price')}</div><div class="spec__v">${t('spec.from')} ${fmtEUR(o.price)} €</div></div>
+            <div><div class="spec__k">${t('spec.yield')}</div><div class="spec__v">${o.yieldTxt ? '<span class="mark">' + o.yieldTxt + '</span>' : '<span style="color:var(--ink-3);font-weight:500">' + t('spec.onreq') + '</span>'}</div></div>
+          </div>
+          <span class="btn btn--sm">${t('catalog.more')}</span>
+        </div>
+      </a>`).join('');
+    res.innerHTML =
+      '<div class="quiz__resh">' + T(L(QUIZ.ui.resTitle)) +
+      ' <span class="quiz__count">' + list.length + ' ' + T(L(QUIZ.ui.found)) + '</span></div>' +
+      (list.length ? '<div class="quiz__cards">' + cards + '</div>'
+                   : '<p class="quiz__none">' + T(L(QUIZ.ui.none)) + '</p>') +
+      '<div class="quiz__actions">' +
+        (list.length ? '<button class="btn btn--accent" type="button" id="quizShowAll">' + T(L(QUIZ.ui.showAll)) + '</button>' : '') +
+        '<a class="btn btn--light" href="#tour">' + T(L(QUIZ.ui.book)) + '</a>' +
+        '<button class="btn btn--ghost" type="button" id="quizRestart">' + T(L(QUIZ.ui.restart)) + '</button>' +
+      '</div>';
+    const sa = $('#quizShowAll');
+    if (sa) sa.addEventListener('click', () => {
+      // apply the quiz answers to the catalog filters and jump there
+      currentFilter = (qAns.type && qAns.type !== 'all') ? qAns.type : 'all';
+      $$('#chips .chip').forEach(c => c.setAttribute('aria-pressed', String(c.dataset.filter === currentFilter)));
+      populateRegions();
+      currentRegion = (qAns.region && qAns.region !== 'all') ? qAns.region : 'all';
+      const rs = $('#regionSel'); if (rs) rs.value = currentRegion;
+      currentSort = 'price-asc';
+      const ss = $('#sortSel'); if (ss) ss.value = currentSort;
+      renderCatalog();
+      const k = document.getElementById('katalog');
+      if (k && k.scrollIntoView) k.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    const rr = $('#quizRestart');
+    if (rr) rr.addEventListener('click', () => { qi = 0; qAns = {}; renderQuiz(); });
+  }
+  function bindQuiz() {
+    if (!QUIZ || !$('#quizBox')) return;
+    $('#quizOpts').addEventListener('click', e => {
+      const b = e.target.closest('.quiz__opt'); if (!b) return;
+      qAns[QUIZ.questions[qi].key] = b.dataset.v;
+      if (qi < QUIZ.questions.length - 1) { qi++; renderQuiz(); }
+      else renderQuizResult();
+    });
+    $('#quizBack').addEventListener('click', () => {
+      if (!$('#quizResult').hidden) { renderQuiz(); return; }   // back from result
+      if (qi > 0) { qi--; renderQuiz(); }
+    });
+    renderQuiz();
+  }
+
   /* ---------------- toast ---------------- */
   function toast(msg) {
     const el = document.createElement('div');
@@ -238,6 +343,7 @@
     try { localStorage.setItem('edelhaus_lang', l); } catch (e) {}
     applyI18n();
     renderCatalog();
+    if ($('#quizBox')) { if ($('#quizResult') && !$('#quizResult').hidden) renderQuizResult(); else renderQuiz(); }
   }
   function bindLang() {
     const wrap = $('#lang');
@@ -279,6 +385,8 @@
     populateRegions();
     renderCatalog();
     bindCatalog();
+    const uc = $('#uspCount'); if (uc) uc.textContent = OBJECTS.length;
+    bindQuiz();
     bindModal();
     bindLang();
     bindDrawer();

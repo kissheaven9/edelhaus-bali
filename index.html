@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<link rel="stylesheet" href="assets/css/styles.css?v=14">
+<link rel="stylesheet" href="assets/css/styles.css?v=15">
 </head>
 <body>
 
@@ -156,7 +156,8 @@
             <option value="default" data-i18n="cat.sort.default">Empfohlen</option>
             <option value="price-asc" data-i18n="cat.sort.priceasc">Preis aufsteigend</option>
             <option value="price-desc" data-i18n="cat.sort.pricedesc">Preis absteigend</option>
-            <option value="area-desc" data-i18n="cat.sort.areadesc">Größte Fläche</option>
+            <option value="area-desc" data-i18n="cat.sort.areadesc">Fläche absteigend</option>
+            <option value="area-asc" data-i18n="cat.sort.areaasc">Fläche aufsteigend</option>
           </select>
         </label>
       </div>
@@ -166,46 +167,53 @@
   </div>
 </section>
 
-<!-- ===== Online Tour ===== -->
-<section class="section section--tight" id="tour">
+<!-- ===== Quiz ===== -->
+<section class="section section--tight" id="quiz">
   <div class="container">
-    <div class="tour reveal">
-      <div class="tour__grid">
-        <div class="tour__visual">
-          <div class="tour__img">
-            <img class="bg" src="assets/img/onlinetour-villa.jpg" alt="Villa bei Nacht">
-            <div class="tour__badge" data-i18n="tour.badge">deutsche Betreuung</div>
-          </div>
-          <div class="phone">
-            <img src="assets/img/onlinetour-person.jpg" alt="Berater im Video-Call">
-            <button class="phone__answer" id="phoneAnswer">
-              <span class="dot"><svg><use href="#i-phone"/></svg></span>
-              <span data-i18n="tour.answer">Antworten</span>
-            </button>
-          </div>
-        </div>
-        <div class="tour__form">
-          <div class="tour__brand">edelhaus</div>
-          <h2 data-i18n-html="tour.title">Buchen Sie eine <span class="mark">Online-Tour</span></h2>
-          <p data-i18n="tour.text">Wir zeigen Ihnen die Objekte Ihrer Wahl und berechnen die Rendite.</p>
-          <form class="form" id="tourForm" novalidate>
-            <div class="field">
-              <label for="tf-name" class="sr-only" data-i18n="form.name">Name</label>
-              <input id="tf-name" name="name" type="text" autocomplete="name" required data-i18n-ph="form.name" placeholder="Name">
-              <span class="field__err" data-i18n="form.err.name">Bitte geben Sie Ihren Namen an.</span>
-            </div>
-            <div class="field">
-              <label for="tf-phone" class="sr-only" data-i18n="form.phone">Telefon</label>
-              <input id="tf-phone" name="phone" type="tel" autocomplete="tel" required data-i18n-ph="form.phone" placeholder="Telefon">
-              <span class="field__err" data-i18n="form.err.phone">Bitte geben Sie eine gültige Telefonnummer an.</span>
-            </div>
-            <div class="form__row">
-              <button class="btn" type="submit" data-i18n="tour.submit">Termin buchen</button>
-              <button class="btn btn--icon btn--dark" type="button" aria-label="Call zurück" id="tourCall"><svg><use href="#i-phone"/></svg></button>
-            </div>
-          </form>
-        </div>
+    <h2 class="h-sec reveal" data-i18n-html="quiz.title">Wir finden das Objekt <span class="mark">für Ihre Situation</span></h2>
+    <p class="lead reveal" style="margin-top:10px" data-i18n="quiz.sub">Vier Fragen — und Sie sehen die passenden Objekte aus unserem Katalog. Ohne Anmeldung, in 30 Sekunden.</p>
+    <div class="quiz reveal" id="quizBox">
+      <div class="quiz__bar"><span class="quiz__barfill" id="quizBar"></span></div>
+      <div class="quiz__step" id="quizStep"></div>
+      <div class="quiz__q" id="quizQ"></div>
+      <div class="quiz__opts" id="quizOpts"></div>
+      <div class="quiz__foot">
+        <button class="btn btn--light btn--sm" type="button" id="quizBack" data-i18n="quiz.back">Zurück</button>
       </div>
+      <div class="quiz__result" id="quizResult" hidden></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Einwände / Sicherheit ===== -->
+<section class="section section--tight" id="sicherheit">
+  <div class="container">
+    <h2 class="h-sec reveal" data-i18n-html="einw.title">Woran Investoren <span class="mark">zweifeln</span> — und wie wir es lösen</h2>
+    <div class="einw reveal">
+      <article class="einw__card">
+        <div class="einw__q" data-i18n="einw.q1">„Ich kann kein Grundstück in Indonesien besitzen.“</div>
+        <p class="einw__a" data-i18n="einw.a1">Richtig — als Ausländer kaufen Sie über Leasehold (Hak Sewa) oder eine PT PMA. Wir prüfen jeden Titel mit unabhängigen Notaren und legen die Struktur vorab schriftlich offen.</p>
+      </article>
+      <article class="einw__card">
+        <div class="einw__q" data-i18n="einw.q2">„Ich bin 12.000 km entfernt — wer kümmert sich?“</div>
+        <p class="einw__a" data-i18n="einw.a2">Wir übernehmen Vermietung, Wartung und Reporting. Sie erhalten monatliche Abrechnungen auf Deutsch und einen festen Ansprechpartner in Ihrer Zeitzone.</p>
+      </article>
+      <article class="einw__card">
+        <div class="einw__q" data-i18n="einw.q3">„Sind die versprochenen Renditen realistisch?“</div>
+        <p class="einw__a" data-i18n="einw.a3">Wir rechnen mit echten Auslastungszahlen, nicht mit Bestcase-Folien. Zu jedem Objekt nennen wir die Quelle der Angaben — und sagen auch, wenn eine Rendite zu optimistisch ist.</p>
+      </article>
+      <article class="einw__card">
+        <div class="einw__q" data-i18n="einw.q4">„Ich sehe nur ausgewählte Angebote eines Maklers.“</div>
+        <p class="einw__a" data-i18n="einw.a4">Bei uns nicht: unser Katalog bündelt Objekte vieler Bauträger und Agenturen auf Bali — vom Studio bis zum Hotel. Wir zeigen auch, was nicht zu Ihnen passt.</p>
+      </article>
+    </div>
+    <div class="usp reveal">
+      <div class="usp__num" id="uspCount">52</div>
+      <div class="usp__txt">
+        <div class="usp__t" data-i18n="usp.title">Der vollständigste Bali-Katalog</div>
+        <p class="usp__d" data-i18n="usp.text">Villen, Apartments, Neubauten und Gewerbe von mehreren Bauträgern und Agenturen — an einem Ort, mit Quellenangabe zu jedem Objekt.</p>
+      </div>
+      <a class="btn btn--accent" href="#katalog" data-i18n="usp.cta">Katalog ansehen</a>
     </div>
   </div>
 </section>
@@ -250,6 +258,50 @@
       <img src="assets/img/client-4.jpg" alt="">
       <img src="assets/img/client-1.jpg" alt="">
       <img src="assets/img/client-5.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- ===== Online Tour ===== -->
+<section class="section section--tight" id="tour">
+  <div class="container">
+    <div class="tour reveal">
+      <div class="tour__grid">
+        <div class="tour__visual">
+          <div class="tour__img">
+            <img class="bg" src="assets/img/onlinetour-villa.jpg" alt="Villa bei Nacht">
+            <div class="tour__badge" data-i18n="tour.badge">deutsche Betreuung</div>
+          </div>
+          <div class="phone">
+            <img src="assets/img/onlinetour-person.jpg" alt="Berater im Video-Call">
+            <button class="phone__answer" id="phoneAnswer">
+              <span class="dot"><svg><use href="#i-phone"/></svg></span>
+              <span data-i18n="tour.answer">Antworten</span>
+            </button>
+          </div>
+        </div>
+        <div class="tour__form">
+          <div class="tour__brand">edelhaus</div>
+          <h2 data-i18n-html="tour.title">Buchen Sie eine <span class="mark">Online-Tour</span></h2>
+          <p data-i18n="tour.text">Wir zeigen Ihnen die Objekte Ihrer Wahl und berechnen die Rendite.</p>
+          <form class="form" id="tourForm" novalidate>
+            <div class="field">
+              <label for="tf-name" class="sr-only" data-i18n="form.name">Name</label>
+              <input id="tf-name" name="name" type="text" autocomplete="name" required data-i18n-ph="form.name" placeholder="Name">
+              <span class="field__err" data-i18n="form.err.name">Bitte geben Sie Ihren Namen an.</span>
+            </div>
+            <div class="field">
+              <label for="tf-phone" class="sr-only" data-i18n="form.phone">Telefon</label>
+              <input id="tf-phone" name="phone" type="tel" autocomplete="tel" required data-i18n-ph="form.phone" placeholder="Telefon">
+              <span class="field__err" data-i18n="form.err.phone">Bitte geben Sie eine gültige Telefonnummer an.</span>
+            </div>
+            <div class="form__row">
+              <button class="btn" type="submit" data-i18n="tour.submit">Termin buchen</button>
+              <button class="btn btn--icon btn--dark" type="button" aria-label="Call zurück" id="tourCall"><svg><use href="#i-phone"/></svg></button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -408,7 +460,7 @@
 
 <div class="toast-wrap" id="toasts"></div>
 
-<script src="assets/js/data.js?v=6"></script>
-<script src="assets/js/app.js?v=11"></script>
+<script src="assets/js/data.js?v=7"></script>
+<script src="assets/js/app.js?v=12"></script>
 </body>
 </html>
