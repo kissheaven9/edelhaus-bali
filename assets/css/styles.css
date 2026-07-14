@@ -151,7 +151,7 @@ p{margin:0}
 
 .hero__wrap{position:relative;z-index:2}
 .hero__content{width:48%;padding-top:calc(84px + clamp(14px,2vw,30px));padding-bottom:clamp(24px,3vw,40px);padding-right:clamp(16px,2vw,32px)}
-.hero__title{font-weight:700;text-transform:uppercase;font-size:clamp(1.5rem,2.9vw,2.2rem);line-height:1.16;letter-spacing:-.005em;color:var(--ink)}
+.hero__title{font-weight:700;text-transform:uppercase;font-size:clamp(1.25rem,2vw,1.62rem);line-height:1.2;letter-spacing:-.01em;color:var(--ink);text-wrap:balance}
 .hero__title .mark{color:var(--accent)}
 .hero__actions{display:flex;align-items:center;gap:24px;margin-top:26px;flex-wrap:nowrap}
 .hero__sub{font-weight:300;font-size:.96rem;line-height:1.45;color:var(--ink-2);flex:0 1 auto;max-width:220px}
@@ -166,7 +166,7 @@ p{margin:0}
 .hero__stack::before{content:"";position:absolute;left:16px;top:16px;right:-16px;bottom:-16px;border-radius:var(--r);background:var(--bg-soft);z-index:-1}
 
 /* tour card on image */
-.tour-card{position:absolute;right:var(--pad);left:auto;top:calc(84px + clamp(14px,2vw,30px));z-index:3;background:#fff;border-radius:16px;padding:10px;display:flex;gap:12px;max-width:266px;box-shadow:var(--shadow)}
+.tour-card{position:absolute;right:calc(max(0px, (100vw - var(--container)) / 2) + var(--pad));left:auto;top:calc(84px + clamp(14px,2vw,30px));z-index:3;background:#fff;border-radius:16px;padding:10px;display:flex;gap:12px;max-width:266px;box-shadow:var(--shadow)}
 .tour-card__main{display:flex;flex-direction:column;justify-content:space-between;gap:12px;padding:4px 0 4px 6px}
 .tour-card__txt{font-weight:700;font-size:.8rem;line-height:1.22;color:var(--ink)}
 .tour-card__call{width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;display:inline-flex;align-items:center;justify-content:center;flex:none}
