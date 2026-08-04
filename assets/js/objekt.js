@@ -15,6 +15,8 @@
 
   let lang = 'de';
   try { lang = LANGS.includes(localStorage.getItem('edelhaus_lang')) ? localStorage.getItem('edelhaus_lang') : 'de'; } catch (e) {}
+  const _urlLang = new URLSearchParams(location.search).get('lang');
+  if (_urlLang && LANGS.includes(_urlLang)) { lang = _urlLang; try { localStorage.setItem('edelhaus_lang', _urlLang); } catch (e) {} }
   const T = window.EDtypo || (s => s);
   const t = (k) => T((I18N[lang] && I18N[lang][k]) || (I18N.de && I18N.de[k]) || k);
 
@@ -135,7 +137,7 @@
 
     // source + map link
     const host = (function () { try { return new URL(o.source).hostname.replace('www.', ''); } catch (e) { return o.source; } })();
-    F('srcline').innerHTML = t('modal.note') + '<br><a href="' + o.source + '" target="_blank" rel="noopener nofollow" class="op-src">' + t('modal.source') + ': ' + host + ' ↗</a>';
+    F('srcline').innerHTML = t('modal.note') + '<br><a href="' + o.source + '" target="_blank" rel="noopener noreferrer nofollow" class="op-src">' + t('modal.source') + ': ' + host + ' ↗</a>';
     const [lat, lng] = o.coords || [-8.65, 115.13];
     const ml = F('maplink');
     ml.href = 'https://www.google.com/maps/search/?api=1&query=' + lat + '%2C' + lng;
@@ -179,7 +181,7 @@
     const tb = $('#opTourBtn'); if (tb) tb.addEventListener('click', openTour);
 
     gal = { imgs: (o.gallery && o.gallery.length ? o.gallery : [o.img]), i: 0 };
-    $('#opThumbs').innerHTML = gal.imgs.map((src, i) => '<img src="' + src + '" alt="' + o.name + ' — Foto ' + (i + 1) + '" data-gi="' + i + '" aria-current="' + (i === 0) + '">').join('');
+    $('#opThumbs').innerHTML = gal.imgs.map((src, i) => '<img src="' + src + '" alt="' + o.name + ' — Foto ' + (i + 1) + '" loading="lazy" decoding="async" data-gi="' + i + '" aria-current="' + (i === 0) + '">').join('');
     renderGallery();
     fillDynamic();
     showMap();

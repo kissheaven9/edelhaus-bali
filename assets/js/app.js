@@ -64,9 +64,9 @@
     if (empty) empty.hidden = list.length > 0;
     if (!list.length) { box.innerHTML = ''; return; }
     box.innerHTML = list.map(o => `
-      <a class="pcard reveal is-in" href="objekt.html?id=${o.id}" target="_blank" rel="noopener" data-id="${o.id}">
+      <a class="pcard reveal is-in" href="objekt.html?id=${o.id}" target="_blank" rel="noopener noreferrer" data-id="${o.id}">
         <div class="pcard__media">
-          <img src="${o.img}" alt="${o.name}" style="object-position:${o.pos}">
+          <img src="${o.img}" alt="${o.name}" loading="lazy" decoding="async" style="object-position:${o.pos}">
           <span class="pcard__badge">${t('catalog.f.' + o.type)}</span>
         </div>
         <div class="pcard__body">
@@ -165,12 +165,12 @@
     const [lat, lng] = o.coords || [-8.65, 115.13];
     showMap(lat, lng, o.loc);
     $('#modalMapLink').innerHTML =
-      `<a href="https://www.google.com/maps/search/?api=1&query=${lat}%2C${lng}" target="_blank" rel="noopener" class="modal__src">${t('modal.mapopen')} ↗</a>`;
+      `<a href="https://www.google.com/maps/search/?api=1&query=${lat}%2C${lng}" target="_blank" rel="noopener noreferrer" class="modal__src">${t('modal.mapopen')} ↗</a>`;
 
     // source + bar price
     const host = (function () { try { return new URL(o.source).hostname.replace('www.', ''); } catch (e) { return o.source; } })();
     $('#modalSrc').innerHTML = t('modal.note') +
-      ' <a href="' + o.source + '" target="_blank" rel="noopener nofollow" class="modal__src">' + t('modal.source') + ': ' + host + ' ↗</a>';
+      ' <a href="' + o.source + '" target="_blank" rel="noopener noreferrer nofollow" class="modal__src">' + t('modal.source') + ': ' + host + ' ↗</a>';
     $('#modalBarPrice').textContent = t('spec.from') + ' ' + fmtEUR(o.price) + ' €';
 
     $('#modalScroll').scrollTop = 0;
@@ -243,8 +243,8 @@
     $('#quizBar').style.width = '100%';
     const res = $('#quizResult'); res.hidden = false;
     const cards = list.slice(0, 3).map(o => `
-      <a class="pcard" href="objekt.html?id=${o.id}" target="_blank" rel="noopener">
-        <div class="pcard__media"><img src="${o.img}" alt="${o.name}" style="object-position:${o.pos}">
+      <a class="pcard" href="objekt.html?id=${o.id}" target="_blank" rel="noopener noreferrer">
+        <div class="pcard__media"><img src="${o.img}" alt="${o.name}" loading="lazy" decoding="async" style="object-position:${o.pos}">
           <span class="pcard__badge">${t('catalog.f.' + o.type)}</span></div>
         <div class="pcard__body">
           <div class="pcard__name">${o.name}</div>
@@ -379,6 +379,8 @@
   document.addEventListener('DOMContentLoaded', () => {
     let saved = 'de';
     try { saved = localStorage.getItem('edelhaus_lang') || 'de'; } catch (e) {}
+    const urlLang = new URLSearchParams(location.search).get('lang');
+    if (urlLang && LANGS.includes(urlLang)) { saved = urlLang; try { localStorage.setItem('edelhaus_lang', urlLang); } catch (e) {} }
     lang = LANGS.includes(saved) ? saved : 'de';
     $('#year').textContent = '2026';
     applyI18n();
